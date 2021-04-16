@@ -1,0 +1,62 @@
+[
+    {
+       "Fld_NroRecetaOriginal":"25097726",
+       "Fld_TipoRecetOriginal":5,
+       "Medicamentos":[
+          {
+             "FLD_MATNOMBRE":"TRAZODONA 100 MG",
+             "Fld_Dosis":1,
+             "Fld_Dias":30,
+             "Fld_CantDias":1
+          },
+          {
+             "FLD_MATNOMBRE":"MEMANTINE CM 10 MG",
+             "Fld_Dosis":1,
+             "Fld_Dias":30,
+             "Fld_CantDias":1
+          }
+       ]
+    },
+    {
+       "Fld_NroRecetaOriginal":"25097740",
+       "Fld_TipoRecetOriginal":5,
+       "Medicamentos":[
+          {
+             "FLD_MATNOMBRE":"TRAZODONA 100 MG",
+             "Fld_Dosis":1,
+             "Fld_Dias":30,
+             "Fld_CantDias":1
+          },
+          {
+             "FLD_MATNOMBRE":"MEMANTINE CM 10 MG",
+             "Fld_Dosis":1,
+             "Fld_Dias":30,
+             "Fld_CantDias":1
+          }
+       ]
+    },
+    {
+       "Fld_NroRecetaOriginal":"25097789",
+       "Fld_TipoRecetOriginal":5,
+       "Medicamentos":[
+          {
+             "FLD_MATNOMBRE":"ACIDO ACETIL SALICILICO CM 100MG",
+             "Fld_Dosis":1,
+             "Fld_Dias":30,
+             "Fld_CantDias":1
+          },
+          {
+             "FLD_MATNOMBRE":"AMLODIPINO CM 5 MG",
+             "Fld_Dosis":1,
+             "Fld_Dias":30,
+             "Fld_CantDias":1
+          },
+          {
+             "FLD_MATNOMBRE":"ATORVASTATINA CM 40 MG",
+             "Fld_Dosis":1,
+             "Fld_Dias":30,
+             "Fld_CantDias":1
+          }
+       ]
+    }
+ ]
