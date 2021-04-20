@@ -15,6 +15,6 @@ const Receta = mongoose.model('receta', new Schema ({
             Fld_Pase: Number,
         }
     ],
-}))
+}, { timestamps: true }))
 
 module.exports = Receta
