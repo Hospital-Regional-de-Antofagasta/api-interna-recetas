@@ -12,6 +12,6 @@ const Receta_detalles = mongoose.model('recetas_detalle', new Schema ({
             Fld_CantDias: Number,
         }
     ],
-}))
+}, { timestamps: true }))
 
 module.exports = Receta_detalles
