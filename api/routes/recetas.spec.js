@@ -38,47 +38,44 @@ afterEach(async () => {
 // receta para realizar las pruebas
 const recetaGuardar = [
     {
-        Fld_NroRecetaOriginal: 25097980,
-        Fld_TipoRecetOriginal: 5,
-        Fld_FechaDigit: "2021-10-30",
-        Fld_MedicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
-        PAC_PAC_Numero: 306211,
-        Fld_PatologiaCronica: "Hipertensión - Coronario",
-        Pases: [
+        numeroRecetaOriginal: 25097980,
+        tipoRecetaOriginal: 5,
+        medicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
+        numeroPaciente: 306211,
+        patologiaCronica: "Hipertensión - Coronario",
+        pases: [
            {
-              Fld_NroReceta: 25097985,
-              Fld_FechaEmision: "2021-03-30",
-              Fld_Pase: 6,
+              numeroReceta: 25097985,
+              fechaEmision: "2021-03-30",
+              numeroPase: 6,
            },
         ],
     },
     {
-        Fld_NroRecetaOriginal: 25097981,
-        Fld_TipoRecetOriginal: 5,
-        Fld_FechaDigit: "2021-10-29",
-        Fld_MedicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
-        PAC_PAC_Numero: 306211,
-        Fld_PatologiaCronica: "Hipertensión - Coronario",
-        Pases: [
+        numeroRecetaOriginal: 25097981,
+        tipoRecetaOriginal: 5,
+        medicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
+        numeroPaciente: 306211,
+        patologiaCronica: "Hipertensión - Coronario",
+        pases: [
            {
-              Fld_NroReceta: 25097985,
-              Fld_FechaEmision: "2021-03-30",
-              Fld_Pase: 6,
+              numeroReceta: 25097985,
+              fechaEmision: "2021-03-30",
+              numeroPase: 6,
            },
         ],
     },
     {
-        Fld_NroRecetaOriginal: 25097982,
-        Fld_TipoRecetOriginal: 5,
-        Fld_FechaDigit: "2021-10-28",
-        Fld_MedicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
-        PAC_PAC_Numero: 306211,
-        Fld_PatologiaCronica: "Hipertensión - Coronario",
-        Pases: [
+        numeroRecetaOriginal: 25097982,
+        tipoRecetaOriginal: 5,
+        medicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
+        numeroPaciente: 306211,
+        patologiaCronica: "Hipertensión - Coronario",
+        pases: [
            {
-              Fld_NroReceta: 25097985,
-              Fld_FechaEmision: "2021-03-30",
-              Fld_Pase: 6,
+              numeroReceta: 25097985,
+              fechaEmision: "2021-03-30",
+              numeroPase: 6,
            },
         ],
     }
@@ -86,92 +83,92 @@ const recetaGuardar = [
 
 const recetaDetallesGuardar = [
     {
-        Fld_NroRecetaOriginal: 25097980,
-        Fld_TipoRecetOriginal: 5,
-        Medicamentos: [
+        numeroRecetaOriginal: 25097980,
+        tipoRecetaOriginal: 5,
+        medicamentos: [
            {
-              FLD_MATNOMBRE: "CARVEDILOL CM 12,5 MG",
-              Fld_Dosis: 1,
-              Fld_Dias: 30,
-              Fld_CantDias: 1,
+              nombreMaterial: "CARVEDILOL CM 12,5 MG",
+              dosis: 1,
+              dias: 30,
+              cantidadDias: 1,
            },
            {
-              FLD_MATNOMBRE: "ACIDO ACETIL SALICILICO CM 100MG",
-              Fld_Dosis: 1,
-              Fld_Dias: 30,
-              Fld_CantDias: 1,
+              nombreMaterial: "ACIDO ACETIL SALICILICO CM 100MG",
+              dosis: 1,
+              dias: 30,
+              cantidadDias: 1,
            },
            {
-              FLD_MATNOMBRE: "ENALAPRILA CM 10 MG",
-              Fld_Dosis: 1,
-              Fld_Dias: 30,
-              Fld_CantDias: 1,
+              nombreMaterial: "ENALAPRILA CM 10 MG",
+              dosis: 1,
+              dias: 30,
+              cantidadDias: 1,
            },
            {
-              FLD_MATNOMBRE: "ATORVASTATINA CM 40 MG",
-              Fld_Dosis: 1,
-              Fld_Dias: 30,
-              Fld_CantDias: 1,
-           },
-        ],
-    },
-    {
-        Fld_NroRecetaOriginal: 25097981,
-        Fld_TipoRecetOriginal: 5,
-        Medicamentos: [
-           {
-              FLD_MATNOMBRE: "CARVEDILOL CM 12,5 MG",
-              Fld_Dosis: 1,
-              Fld_Dias: 30,
-              Fld_CantDias: 1,
-           },
-           {
-              FLD_MATNOMBRE: "ACIDO ACETIL SALICILICO CM 100MG",
-              Fld_Dosis: 1,
-              Fld_Dias: 30,
-              Fld_CantDias: 1,
-           },
-           {
-              FLD_MATNOMBRE: "ENALAPRILA CM 10 MG",
-              Fld_Dosis: 1,
-              Fld_Dias: 30,
-              Fld_CantDias: 1,
-           },
-           {
-              FLD_MATNOMBRE: "ATORVASTATINA CM 40 MG",
-              Fld_Dosis: 1,
-              Fld_Dias: 30,
-              Fld_CantDias: 1,
+              nombreMaterial: "ATORVASTATINA CM 40 MG",
+              dosis: 1,
+              dias: 30,
+              cantidadDias: 1,
            },
         ],
     },
     {
-        Fld_NroRecetaOriginal: 25097982,
-        Fld_TipoRecetOriginal: 5,
-        Medicamentos: [
+        numeroRecetaOriginal: 25097981,
+        tipoRecetaOriginal: 5,
+        medicamentos: [
            {
-              FLD_MATNOMBRE: "CARVEDILOL CM 12,5 MG",
-              Fld_Dosis: 1,
-              Fld_Dias: 30,
-              Fld_CantDias: 1,
+              nombreMaterial: "CARVEDILOL CM 12,5 MG",
+              dosis: 1,
+              dias: 30,
+              cantidadDias: 1,
            },
            {
-              FLD_MATNOMBRE: "ACIDO ACETIL SALICILICO CM 100MG",
-              Fld_Dosis: 1,
-              Fld_Dias: 30,
-              Fld_CantDias: 1,
+              nombreMaterial: "ACIDO ACETIL SALICILICO CM 100MG",
+              dosis: 1,
+              dias: 30,
+              cantidadDias: 1,
            },
            {
-              FLD_MATNOMBRE: "ENALAPRILA CM 10 MG",
-              Fld_Dosis: 1,
-              Fld_Dias: 30,
-              Fld_CantDias: 1,
+              nombreMaterial: "ENALAPRILA CM 10 MG",
+              dosis: 1,
+              dias: 30,
+              cantidadDias: 1,
            },
            {
-              FLD_MATNOMBRE: "ATORVASTATINA CM 40 MG",
-              Fld_Dosis: 1,
-              Fld_Dias: 30,
-              Fld_CantDias: 1,
+              nombreMaterial: "ATORVASTATINA CM 40 MG",
+              dosis: 1,
+              dias: 30,
+              cantidadDias: 1,
+           },
+        ],
+    },
+    {
+        numeroRecetaOriginal: 25097982,
+        tipoRecetaOriginal: 5,
+        medicamentos: [
+           {
+              nombreMaterial: "CARVEDILOL CM 12,5 MG",
+              dosis: 1,
+              dias: 30,
+              cantidadDias: 1,
+           },
+           {
+              nombreMaterial: "ACIDO ACETIL SALICILICO CM 100MG",
+              dosis: 1,
+              dias: 30,
+              cantidadDias: 1,
+           },
+           {
+              nombreMaterial: "ENALAPRILA CM 10 MG",
+              dosis: 1,
+              dias: 30,
+              cantidadDias: 1,
+           },
+           {
+              nombreMaterial: "ATORVASTATINA CM 40 MG",
+              dosis: 1,
+              dias: 30,
+              cantidadDias: 1,
            },
         ],
     }
@@ -185,7 +182,7 @@ describe('Endpoints recetas', () => {
             const response = await request.get('/hra/hradb_a_mongodb/recetas/ultimo/5')
                 .set('Authorization', 'no-token')
             // verificar que retorno el status code correcto
-            expect(response.status).toBe(403)
+            expect(response.status).toBe(401)
 
             done()
         })
@@ -215,15 +212,14 @@ describe('Endpoints recetas', () => {
             // verificar que retorno el status code correcto
             expect(response.status).toBe(200)
             // verificar que la receta obtenida es igual a la que se guardo
-            expect(response.body.Fld_NroRecetaOriginal).toBe(recetaGuardar[0].Fld_NroRecetaOriginal)
-            expect(response.body.Fld_TipoRecetOriginal).toBe(recetaGuardar[0].Fld_TipoRecetOriginal)
-            expect(Date.parse(response.body.Fld_FechaDigit)).toBe(Date.parse(recetaGuardar[0].Fld_FechaDigit))
-            expect(response.body.Fld_MedicoPrescriptor).toBe(recetaGuardar[0].Fld_MedicoPrescriptor)
-            expect(response.body.PAC_PAC_Numero).toBe(recetaGuardar[0].PAC_PAC_Numero)
-            expect(response.body.Fld_PatologiaCronica).toBe(recetaGuardar[0].Fld_PatologiaCronica)
-            expect(response.body.Pases[0].Fld_NroReceta).toBe(recetaGuardar[0].Pases[0].Fld_NroReceta)
-            expect(Date.parse(response.body.Pases[0].Fld_FechaEmision)).toBe(Date.parse(recetaGuardar[0].Pases[0].Fld_FechaEmision))
-            expect(response.body.Pases[0].Fld_Pase).toBe(recetaGuardar[0].Pases[0].Fld_Pase)
+            expect(response.body.numeroRecetaOriginal).toBe(recetaGuardar[2].numeroRecetaOriginal)
+            expect(response.body.tipoRecetaOriginal).toBe(recetaGuardar[2].tipoRecetaOriginal)
+            expect(response.body.medicoPrescriptor).toBe(recetaGuardar[2].medicoPrescriptor)
+            expect(response.body.numeroPaciente).toBe(recetaGuardar[2].numeroPaciente)
+            expect(response.body.patologiaCronica).toBe(recetaGuardar[2].patologiaCronica)
+            expect(response.body.pases[0].numeroReceta).toBe(recetaGuardar[2].pases[0].numeroReceta)
+            expect(Date.parse(response.body.pases[0].fechaEmision)).toBe(Date.parse(recetaGuardar[2].pases[0].fechaEmision))
+            expect(response.body.pases[0].numeroPase).toBe(recetaGuardar[2].pases[0].numeroPase)
 
             done()
         })
@@ -240,15 +236,15 @@ describe('Endpoints recetas', () => {
                 })
             // obtener la receta que no se guardo
             const recetaObtenida = await Recetas.findOne({
-                Fld_NroRecetaOriginal: recetaGuardar[0].Fld_NroRecetaOriginal,
-                Fld_TipoRecetOriginal: recetaGuardar[0].Fld_TipoRecetOriginal,
+                numeroRecetaOriginal: recetaGuardar[0].numeroRecetaOriginal,
+                tipoRecetaOriginal: recetaGuardar[0].tipoRecetaOriginal,
             }).exec()
             const recetaDetallesObtenida = await RecetasDetalles.findOne({
-                Fld_NroRecetaOriginal: recetaGuardar[0].Fld_NroRecetaOriginal,
-                Fld_TipoRecetOriginal: recetaGuardar[0].Fld_TipoRecetOriginal,
+                numeroRecetaOriginal: recetaGuardar[0].numeroRecetaOriginal,
+                tipoRecetaOriginal: recetaGuardar[0].tipoRecetaOriginal,
             }).exec()
             // verificar que retorno el status code correcto
-            expect(response.status).toBe(403)
+            expect(response.status).toBe(401)
             // no se debe haber encontrado el paciente
             expect(recetaObtenida).toBeFalsy()
             expect(recetaDetallesObtenida).toBeFalsy()
@@ -266,40 +262,39 @@ describe('Endpoints recetas', () => {
                 })
             // obtener la receta que se guardo
             const recetaObtenida = await Recetas.findOne({
-                Fld_NroRecetaOriginal: recetaGuardar[0].Fld_NroRecetaOriginal,
-                Fld_TipoRecetOriginal: recetaGuardar[0].Fld_TipoRecetOriginal,
+                numeroRecetaOriginal: recetaGuardar[0].numeroRecetaOriginal,
+                tipoRecetaOriginal: recetaGuardar[0].tipoRecetaOriginal,
             }).exec()
             const recetaDetallesObtenida = await RecetasDetalles.findOne({
-                Fld_NroRecetaOriginal: recetaGuardar[0].Fld_NroRecetaOriginal,
-                Fld_TipoRecetOriginal: recetaGuardar[0].Fld_TipoRecetOriginal,
+                numeroRecetaOriginal: recetaGuardar[0].numeroRecetaOriginal,
+                tipoRecetaOriginal: recetaGuardar[0].tipoRecetaOriginal,
             }).exec()
             // verificar que retorno el status code correcto
             expect(response.status).toBe(201)
             // verificar que la receta obtenida es igual a la que se guardo
-            expect(recetaObtenida.Fld_NroRecetaOriginal).toBe(recetaGuardar[0].Fld_NroRecetaOriginal)
-            expect(recetaObtenida.Fld_TipoRecetOriginal).toBe(recetaGuardar[0].Fld_TipoRecetOriginal)
-            expect(Date.parse(recetaObtenida.Fld_FechaDigit)).toBe(Date.parse(recetaGuardar[0].Fld_FechaDigit))
-            expect(recetaObtenida.Fld_MedicoPrescriptor).toBe(recetaGuardar[0].Fld_MedicoPrescriptor)
-            expect(recetaObtenida.PAC_PAC_Numero).toBe(recetaGuardar[0].PAC_PAC_Numero)
-            expect(recetaObtenida.Fld_PatologiaCronica).toBe(recetaGuardar[0].Fld_PatologiaCronica)
-            expect(recetaObtenida.Pases[0].Fld_NroReceta).toBe(recetaGuardar[0].Pases[0].Fld_NroReceta)
-            expect(Date.parse(recetaObtenida.Pases[0].Fld_FechaEmision)).toBe(Date.parse(recetaGuardar[0].Pases[0].Fld_FechaEmision))
-            expect(recetaObtenida.Pases[0].Fld_Pase).toBe(recetaGuardar[0].Pases[0].Fld_Pase)
+            expect(recetaObtenida.numeroRecetaOriginal).toBe(recetaGuardar[0].numeroRecetaOriginal)
+            expect(recetaObtenida.tipoRecetaOriginal).toBe(recetaGuardar[0].tipoRecetaOriginal)
+            expect(recetaObtenida.medicoPrescriptor).toBe(recetaGuardar[0].medicoPrescriptor)
+            expect(recetaObtenida.numeroPaciente).toBe(recetaGuardar[0].numeroPaciente)
+            expect(recetaObtenida.patologiaCronica).toBe(recetaGuardar[0].patologiaCronica)
+            expect(recetaObtenida.pases[0].numeroReceta).toBe(recetaGuardar[0].pases[0].numeroReceta)
+            expect(Date.parse(recetaObtenida.pases[0].fechaEmision)).toBe(Date.parse(recetaGuardar[0].pases[0].fechaEmision))
+            expect(recetaObtenida.pases[0].numeroPase).toBe(recetaGuardar[0].pases[0].numeroPase)
             // verificar que la receta detalles obtenida es igual a la que se guardo
-            expect(recetaDetallesObtenida.Fld_NroRecetaOriginal).toBe(recetaDetallesGuardar[0].Fld_NroRecetaOriginal)
-            expect(recetaDetallesObtenida.Fld_TipoRecetOriginal).toBe(recetaDetallesGuardar[0].Fld_TipoRecetOriginal)
-            expect(recetaDetallesObtenida.Medicamentos[0].FLD_MATNOMBRE).toBe(recetaDetallesGuardar[0].Medicamentos[0].FLD_MATNOMBRE)
-            expect(recetaDetallesObtenida.Medicamentos[0].Fld_Dosis).toBe(recetaDetallesGuardar[0].Medicamentos[0].Fld_Dosis)
-            expect(recetaDetallesObtenida.Medicamentos[0].Fld_Dias).toBe(recetaDetallesGuardar[0].Medicamentos[0].Fld_Dias)
-            expect(recetaDetallesObtenida.Medicamentos[0].Fld_CantDias).toBe(recetaDetallesGuardar[0].Medicamentos[0].Fld_CantDias)
-            expect(recetaDetallesObtenida.Medicamentos[1].FLD_MATNOMBRE).toBe(recetaDetallesGuardar[0].Medicamentos[1].FLD_MATNOMBRE)
-            expect(recetaDetallesObtenida.Medicamentos[1].Fld_Dosis).toBe(recetaDetallesGuardar[0].Medicamentos[1].Fld_Dosis)
-            expect(recetaDetallesObtenida.Medicamentos[1].Fld_Dias).toBe(recetaDetallesGuardar[0].Medicamentos[1].Fld_Dias)
-            expect(recetaDetallesObtenida.Medicamentos[1].Fld_CantDias).toBe(recetaDetallesGuardar[0].Medicamentos[1].Fld_CantDias)
-            expect(recetaDetallesObtenida.Medicamentos[2].FLD_MATNOMBRE).toBe(recetaDetallesGuardar[0].Medicamentos[2].FLD_MATNOMBRE)
-            expect(recetaDetallesObtenida.Medicamentos[2].Fld_Dosis).toBe(recetaDetallesGuardar[0].Medicamentos[2].Fld_Dosis)
-            expect(recetaDetallesObtenida.Medicamentos[2].Fld_Dias).toBe(recetaDetallesGuardar[0].Medicamentos[2].Fld_Dias)
-            expect(recetaDetallesObtenida.Medicamentos[2].Fld_CantDias).toBe(recetaDetallesGuardar[0].Medicamentos[2].Fld_CantDias)
+            expect(recetaDetallesObtenida.numeroRecetaOriginal).toBe(recetaDetallesGuardar[0].numeroRecetaOriginal)
+            expect(recetaDetallesObtenida.tipoRecetaOriginal).toBe(recetaDetallesGuardar[0].tipoRecetaOriginal)
+            expect(recetaDetallesObtenida.medicamentos[0].nombreMaterial).toBe(recetaDetallesGuardar[0].medicamentos[0].nombreMaterial)
+            expect(recetaDetallesObtenida.medicamentos[0].dosis).toBe(recetaDetallesGuardar[0].medicamentos[0].dosis)
+            expect(recetaDetallesObtenida.medicamentos[0].dias).toBe(recetaDetallesGuardar[0].medicamentos[0].dias)
+            expect(recetaDetallesObtenida.medicamentos[0].cantidadDias).toBe(recetaDetallesGuardar[0].medicamentos[0].cantidadDias)
+            expect(recetaDetallesObtenida.medicamentos[1].nombreMaterial).toBe(recetaDetallesGuardar[0].medicamentos[1].nombreMaterial)
+            expect(recetaDetallesObtenida.medicamentos[1].dosis).toBe(recetaDetallesGuardar[0].medicamentos[1].dosis)
+            expect(recetaDetallesObtenida.medicamentos[1].dias).toBe(recetaDetallesGuardar[0].medicamentos[1].dias)
+            expect(recetaDetallesObtenida.medicamentos[1].cantidadDias).toBe(recetaDetallesGuardar[0].medicamentos[1].cantidadDias)
+            expect(recetaDetallesObtenida.medicamentos[2].nombreMaterial).toBe(recetaDetallesGuardar[0].medicamentos[2].nombreMaterial)
+            expect(recetaDetallesObtenida.medicamentos[2].dosis).toBe(recetaDetallesGuardar[0].medicamentos[2].dosis)
+            expect(recetaDetallesObtenida.medicamentos[2].dias).toBe(recetaDetallesGuardar[0].medicamentos[2].dias)
+            expect(recetaDetallesObtenida.medicamentos[2].cantidadDias).toBe(recetaDetallesGuardar[0].medicamentos[2].cantidadDias)
 
             done()
         })
@@ -314,12 +309,12 @@ describe('Endpoints recetas', () => {
                 })
 
             const recetaObtenida = await Recetas.findOne({
-                Fld_NroRecetaOriginal: recetaGuardar[0].Fld_NroRecetaOriginal,
-                Fld_TipoRecetOriginal: recetaGuardar[0].Fld_TipoRecetOriginal,
+                numeroRecetaOriginal: recetaGuardar[0].numeroRecetaOriginal,
+                tipoRecetaOriginal: recetaGuardar[0].tipoRecetaOriginal,
             }).exec()
             const recetaDetallesObtenida = await RecetasDetalles.findOne({
-                Fld_NroRecetaOriginal: recetaDetallesGuardar[0].Fld_NroRecetaOriginal,
-                Fld_TipoRecetOriginal: recetaGuardar[0].Fld_TipoRecetOriginal,
+                numeroRecetaOriginal: recetaDetallesGuardar[0].numeroRecetaOriginal,
+                tipoRecetaOriginal: recetaGuardar[0].tipoRecetaOriginal,
             }).exec()
             // verificar que retorno el status code correcto
             expect(response.status).toBe(500)

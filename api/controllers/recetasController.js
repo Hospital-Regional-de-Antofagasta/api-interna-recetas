@@ -4,8 +4,8 @@ const RecetasDetalles = require('../models/RecetasDetalles')
 exports.getLast = async (req, res) => {
     try {
         const tipoReceta = req.params.tipoReceta
-        const receta = await Recetas.findOne({ Fld_TipoRecetOriginal: tipoReceta })
-            .sort({ Fld_FechaDigit: -1 })
+        const receta = await Recetas.findOne({ tipoRecetaOriginal: tipoReceta })
+            .sort({ numeroRecetaOriginal: -1 })
             .exec()
         res.status(200).send(receta)
     } catch (error) {
@@ -27,14 +27,14 @@ exports.create = async (req, res) => {
         await Promise.all([
             recetas.map(async (receta) => {
                 Recetas.deleteOne({
-                    Fld_NroRecetaOriginal: receta.Fld_NroRecetaOriginal,
-                    Fld_TipoRecetOriginal: receta.Fld_TipoRecetOriginal,
+                    numeroRecetaOriginal: receta.numeroRecetaOriginal,
+                    tipoRecetaOriginal: receta.tipoRecetaOriginal,
                 }).exec()
             }),
             recetasDetalles.map(async (recetaDetalle) => {
                 RecetasDetalles.deleteOne({
-                    Fld_NroRecetaOriginal: recetaDetalle.Fld_NroRecetaOriginal,
-                    Fld_TipoRecetOriginal: recetaDetalle.Fld_TipoRecetOriginal,
+                    numeroRecetaOriginal: recetaDetalle.numeroRecetaOriginal,
+                    tipoRecetaOriginal: recetaDetalle.tipoRecetaOriginal,
                 }).exec()
             }),
         ])
