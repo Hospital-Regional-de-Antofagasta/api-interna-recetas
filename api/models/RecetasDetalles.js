@@ -2,14 +2,14 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const Receta_detalles = mongoose.model('recetas_detalle', new Schema ({
-    Fld_NroRecetaOriginal: Number,
-    Fld_TipoRecetOriginal: Number,
-    Medicamentos: [
+    numeroRecetaOriginal: Number,
+    tipoRecetaOriginal: Number,
+    medicamentos: [
         {
-            FLD_MATNOMBRE: String,
-            Fld_Dosis: Number,
-            Fld_Dias: Number,
-            Fld_CantDias: Number,
+            nombreMaterial: String,
+            dosis: Number,
+            dias: Number,
+            cantidadDias: Number,
         }
     ],
 }, { timestamps: true }))

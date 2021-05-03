@@ -1,61 +1,61 @@
 [
     {
-       "Fld_NroRecetaOriginal":"25097726",
-       "Fld_TipoRecetOriginal":5,
-       "Medicamentos":[
+       "numeroRecetaOriginal":"25097726",
+       "tipoRecetaOriginal":5,
+       "medicamentos":[
           {
-             "FLD_MATNOMBRE":"TRAZODONA 100 MG",
-             "Fld_Dosis":1,
-             "Fld_Dias":30,
-             "Fld_CantDias":1
+             "nombreMaterial":"TRAZODONA 100 MG",
+             "dosis":1,
+             "dias":30,
+             "cantidadDias":1
           },
           {
-             "FLD_MATNOMBRE":"MEMANTINE CM 10 MG",
-             "Fld_Dosis":1,
-             "Fld_Dias":30,
-             "Fld_CantDias":1
+             "nombreMaterial":"MEMANTINE CM 10 MG",
+             "dosis":1,
+             "dias":30,
+             "cantidadDias":1
           }
        ]
     },
     {
-       "Fld_NroRecetaOriginal":"25097740",
-       "Fld_TipoRecetOriginal":5,
-       "Medicamentos":[
+       "numeroRecetaOriginal":"25097740",
+       "tipoRecetaOriginal":5,
+       "medicamentos":[
           {
-             "FLD_MATNOMBRE":"TRAZODONA 100 MG",
-             "Fld_Dosis":1,
-             "Fld_Dias":30,
-             "Fld_CantDias":1
+             "nombreMaterial":"TRAZODONA 100 MG",
+             "dosis":1,
+             "dias":30,
+             "cantidadDias":1
           },
           {
-             "FLD_MATNOMBRE":"MEMANTINE CM 10 MG",
-             "Fld_Dosis":1,
-             "Fld_Dias":30,
-             "Fld_CantDias":1
+             "nombreMaterial":"MEMANTINE CM 10 MG",
+             "dosis":1,
+             "dias":30,
+             "cantidadDias":1
           }
        ]
     },
     {
-       "Fld_NroRecetaOriginal":"25097789",
-       "Fld_TipoRecetOriginal":5,
-       "Medicamentos":[
+       "numeroRecetaOriginal":"25097789",
+       "tipoRecetaOriginal":5,
+       "medicamentos":[
           {
-             "FLD_MATNOMBRE":"ACIDO ACETIL SALICILICO CM 100MG",
-             "Fld_Dosis":1,
-             "Fld_Dias":30,
-             "Fld_CantDias":1
+             "nombreMaterial":"ACIDO ACETIL SALICILICO CM 100MG",
+             "dosis":1,
+             "dias":30,
+             "cantidadDias":1
           },
           {
-             "FLD_MATNOMBRE":"AMLODIPINO CM 5 MG",
-             "Fld_Dosis":1,
-             "Fld_Dias":30,
-             "Fld_CantDias":1
+             "nombreMaterial":"AMLODIPINO CM 5 MG",
+             "dosis":1,
+             "dias":30,
+             "cantidadDias":1
           },
           {
-             "FLD_MATNOMBRE":"ATORVASTATINA CM 40 MG",
-             "Fld_Dosis":1,
-             "Fld_Dias":30,
-             "Fld_CantDias":1
+             "nombreMaterial":"ATORVASTATINA CM 40 MG",
+             "dosis":1,
+             "dias":30,
+             "cantidadDias":1
           }
        ]
     }

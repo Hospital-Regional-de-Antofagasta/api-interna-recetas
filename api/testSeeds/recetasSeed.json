@@ -1,46 +1,43 @@
 [
     {
-       "Fld_NroRecetaOriginal":"25097726",
-       "Fld_TipoRecetOriginal":5,
-       "Fld_FechaDigit":"2020-10-30T11:38:13.570Z",
-       "Fld_MedicoPrescriptor":"GABRIEL MARTINEZ FUENTES",
-       "PAC_PAC_Numero":"10016",
-       "Fld_PatologiaCronica":"Demencia y Trastornos Mentales Organicos",
-       "Pases":[
+       "numeroRecetaOriginal":"25097726",
+       "tipoRecetaOriginal":5,
+       "medicoPrescriptor":"GABRIEL MARTINEZ FUENTES",
+       "numeroPaciente":"10016",
+       "patologiaCronica":"Demencia y Trastornos Mentales Organicos",
+       "pases":[
           {
-             "Fld_NroReceta":"25097731",
-             "Fld_FechaEmision":"2021-03-30T03:00:00.000Z",
-             "Fld_Pase":6
+             "numeroReceta":"25097731",
+             "fechaEmision":"2021-03-30T03:00:00.000Z",
+             "numeroPase":6
           }
        ]
     },
     {
-       "Fld_NroRecetaOriginal":"25097740",
-       "Fld_TipoRecetOriginal":5,
-       "Fld_FechaDigit":"2020-10-30T11:40:36.713Z",
-       "Fld_MedicoPrescriptor":"GABRIEL MARTINEZ FUENTES",
-       "PAC_PAC_Numero":"10016",
-       "Fld_PatologiaCronica":"Demencia y Trastornos Mentales Organicos",
-       "Pases":[
+       "numeroRecetaOriginal":"25097740",
+       "tipoRecetaOriginal":5,
+       "medicoPrescriptor":"GABRIEL MARTINEZ FUENTES",
+       "numeroPaciente":"10016",
+       "patologiaCronica":"Demencia y Trastornos Mentales Organicos",
+       "pases":[
           {
-             "Fld_NroReceta":"25097745",
-             "Fld_FechaEmision":"2021-03-30T03:00:00.000Z",
-             "Fld_Pase":6
+             "numeroReceta":"25097745",
+             "fechaEmision":"2021-03-30T03:00:00.000Z",
+             "numeroPase":6
           }
        ]
     },
     {
-       "Fld_NroRecetaOriginal":"25097789",
-       "Fld_TipoRecetOriginal":5,
-       "Fld_FechaDigit":"2020-10-30T11:55:45.030Z",
-       "Fld_MedicoPrescriptor":"GUILLERMO  EDUARDO ILLANES BROCHET",
-       "PAC_PAC_Numero":"74405",
-       "Fld_PatologiaCronica":"Hipertensión - Coronario",
-       "Pases":[
+       "numeroRecetaOriginal":"25097789",
+       "tipoRecetaOriginal":5,
+       "medicoPrescriptor":"GUILLERMO  EDUARDO ILLANES BROCHET",
+       "numeroPaciente":"74405",
+       "patologiaCronica":"Hipertensión - Coronario",
+       "pases":[
           {
-             "Fld_NroReceta":"25097795",
-             "Fld_FechaEmision":"2021-03-30T03:00:00.000Z",
-             "Fld_Pase":6
+             "numeroReceta":"25097795",
+             "fechaEmision":"2021-03-30T03:00:00.000Z",
+             "numeroPase":6
           }
        ]
     }
