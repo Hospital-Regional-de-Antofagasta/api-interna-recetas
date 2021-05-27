@@ -10,6 +10,7 @@ const Receta_detalles = mongoose.model('recetas_detalle', new Schema ({
             dosis: Number,
             dias: Number,
             cantidadDias: Number,
+            medicamentoControlado: Boolean
         }
     ],
 }, { timestamps: true }))

@@ -43,6 +43,7 @@ const recetaGuardar = [
         medicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
         numeroPaciente: 306211,
         patologiaCronica: "Hipertensión - Coronario",
+        recetaRetenida: false,
         pases: [
            {
               numeroReceta: 25097985,
@@ -57,6 +58,7 @@ const recetaGuardar = [
         medicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
         numeroPaciente: 306211,
         patologiaCronica: "Hipertensión - Coronario",
+        recetaRetenida: false,
         pases: [
            {
               numeroReceta: 25097985,
@@ -71,6 +73,7 @@ const recetaGuardar = [
         medicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
         numeroPaciente: 306211,
         patologiaCronica: "Hipertensión - Coronario",
+        recetaRetenida: false,
         pases: [
            {
               numeroReceta: 25097985,
@@ -91,24 +94,28 @@ const recetaDetallesGuardar = [
               dosis: 1,
               dias: 30,
               cantidadDias: 1,
+              medicamentoControlado: false
            },
            {
               nombreMaterial: "ACIDO ACETIL SALICILICO CM 100MG",
               dosis: 1,
               dias: 30,
               cantidadDias: 1,
+              medicamentoControlado: false
            },
            {
               nombreMaterial: "ENALAPRILA CM 10 MG",
               dosis: 1,
               dias: 30,
               cantidadDias: 1,
+              medicamentoControlado: false
            },
            {
               nombreMaterial: "ATORVASTATINA CM 40 MG",
               dosis: 1,
               dias: 30,
               cantidadDias: 1,
+              medicamentoControlado: false
            },
         ],
     },
@@ -121,24 +128,28 @@ const recetaDetallesGuardar = [
               dosis: 1,
               dias: 30,
               cantidadDias: 1,
+              medicamentoControlado: false
            },
            {
               nombreMaterial: "ACIDO ACETIL SALICILICO CM 100MG",
               dosis: 1,
               dias: 30,
               cantidadDias: 1,
+              medicamentoControlado: false
            },
            {
               nombreMaterial: "ENALAPRILA CM 10 MG",
               dosis: 1,
               dias: 30,
               cantidadDias: 1,
+              medicamentoControlado: false
            },
            {
               nombreMaterial: "ATORVASTATINA CM 40 MG",
               dosis: 1,
               dias: 30,
               cantidadDias: 1,
+              medicamentoControlado: false
            },
         ],
     },
@@ -151,24 +162,28 @@ const recetaDetallesGuardar = [
               dosis: 1,
               dias: 30,
               cantidadDias: 1,
+              medicamentoControlado: false
            },
            {
               nombreMaterial: "ACIDO ACETIL SALICILICO CM 100MG",
               dosis: 1,
               dias: 30,
               cantidadDias: 1,
+              medicamentoControlado: false
            },
            {
               nombreMaterial: "ENALAPRILA CM 10 MG",
               dosis: 1,
               dias: 30,
               cantidadDias: 1,
+              medicamentoControlado: false
            },
            {
               nombreMaterial: "ATORVASTATINA CM 40 MG",
               dosis: 1,
               dias: 30,
               cantidadDias: 1,
+              medicamentoControlado: false
            },
         ],
     }
@@ -277,6 +292,7 @@ describe('Endpoints recetas', () => {
             expect(recetaObtenida.medicoPrescriptor).toBe(recetaGuardar[0].medicoPrescriptor)
             expect(recetaObtenida.numeroPaciente).toBe(recetaGuardar[0].numeroPaciente)
             expect(recetaObtenida.patologiaCronica).toBe(recetaGuardar[0].patologiaCronica)
+            expect(recetaObtenida.recetaRetenida).toBe(recetaGuardar[0].recetaRetenida)
             expect(recetaObtenida.pases[0].numeroReceta).toBe(recetaGuardar[0].pases[0].numeroReceta)
             expect(Date.parse(recetaObtenida.pases[0].fechaEmision)).toBe(Date.parse(recetaGuardar[0].pases[0].fechaEmision))
             expect(recetaObtenida.pases[0].numeroPase).toBe(recetaGuardar[0].pases[0].numeroPase)
@@ -287,14 +303,17 @@ describe('Endpoints recetas', () => {
             expect(recetaDetallesObtenida.medicamentos[0].dosis).toBe(recetaDetallesGuardar[0].medicamentos[0].dosis)
             expect(recetaDetallesObtenida.medicamentos[0].dias).toBe(recetaDetallesGuardar[0].medicamentos[0].dias)
             expect(recetaDetallesObtenida.medicamentos[0].cantidadDias).toBe(recetaDetallesGuardar[0].medicamentos[0].cantidadDias)
+            expect(recetaDetallesObtenida.medicamentos[0].medicamentoControlado).toBe(recetaDetallesGuardar[0].medicamentos[0].medicamentoControlado)
             expect(recetaDetallesObtenida.medicamentos[1].nombreMaterial).toBe(recetaDetallesGuardar[0].medicamentos[1].nombreMaterial)
             expect(recetaDetallesObtenida.medicamentos[1].dosis).toBe(recetaDetallesGuardar[0].medicamentos[1].dosis)
             expect(recetaDetallesObtenida.medicamentos[1].dias).toBe(recetaDetallesGuardar[0].medicamentos[1].dias)
             expect(recetaDetallesObtenida.medicamentos[1].cantidadDias).toBe(recetaDetallesGuardar[0].medicamentos[1].cantidadDias)
+            expect(recetaDetallesObtenida.medicamentos[1].medicamentoControlado).toBe(recetaDetallesGuardar[0].medicamentos[1].medicamentoControlado)
             expect(recetaDetallesObtenida.medicamentos[2].nombreMaterial).toBe(recetaDetallesGuardar[0].medicamentos[2].nombreMaterial)
             expect(recetaDetallesObtenida.medicamentos[2].dosis).toBe(recetaDetallesGuardar[0].medicamentos[2].dosis)
             expect(recetaDetallesObtenida.medicamentos[2].dias).toBe(recetaDetallesGuardar[0].medicamentos[2].dias)
             expect(recetaDetallesObtenida.medicamentos[2].cantidadDias).toBe(recetaDetallesGuardar[0].medicamentos[2].cantidadDias)
+            expect(recetaDetallesObtenida.medicamentos[2].medicamentoControlado).toBe(recetaDetallesGuardar[0].medicamentos[2].medicamentoControlado)
 
             done()
         })

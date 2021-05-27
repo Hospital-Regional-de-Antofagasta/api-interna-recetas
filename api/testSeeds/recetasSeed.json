@@ -5,6 +5,7 @@
        "medicoPrescriptor":"GABRIEL MARTINEZ FUENTES",
        "numeroPaciente":"10016",
        "patologiaCronica":"Demencia y Trastornos Mentales Organicos",
+       "recetaRetenida": false,
        "pases":[
           {
              "numeroReceta":"25097731",
@@ -19,6 +20,7 @@
        "medicoPrescriptor":"GABRIEL MARTINEZ FUENTES",
        "numeroPaciente":"10016",
        "patologiaCronica":"Demencia y Trastornos Mentales Organicos",
+       "recetaRetenida": false,
        "pases":[
           {
              "numeroReceta":"25097745",
@@ -33,6 +35,7 @@
        "medicoPrescriptor":"GUILLERMO  EDUARDO ILLANES BROCHET",
        "numeroPaciente":"74405",
        "patologiaCronica":"Hipertensión - Coronario",
+       "recetaRetenida": false,
        "pases":[
           {
              "numeroReceta":"25097795",
