@@ -7,6 +7,7 @@ const Receta = mongoose.model('receta', new Schema ({
     medicoPrescriptor: String,
     numeroPaciente: Number,
     patologiaCronica: String,
+    recetaRetenida: Boolean,
     pases: [
         {
             numeroReceta: Number,

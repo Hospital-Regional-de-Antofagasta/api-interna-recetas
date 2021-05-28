@@ -7,13 +7,15 @@
              "nombreMaterial":"TRAZODONA 100 MG",
              "dosis":1,
              "dias":30,
-             "cantidadDias":1
+             "cantidadDias":1,
+             "medicamentoControlado": false
           },
           {
              "nombreMaterial":"MEMANTINE CM 10 MG",
              "dosis":1,
              "dias":30,
-             "cantidadDias":1
+             "cantidadDias":1,
+             "medicamentoControlado": false
           }
        ]
     },
@@ -25,13 +27,15 @@
              "nombreMaterial":"TRAZODONA 100 MG",
              "dosis":1,
              "dias":30,
-             "cantidadDias":1
+             "cantidadDias":1,
+             "medicamentoControlado": false
           },
           {
              "nombreMaterial":"MEMANTINE CM 10 MG",
              "dosis":1,
              "dias":30,
-             "cantidadDias":1
+             "cantidadDias":1,
+             "medicamentoControlado": false
           }
        ]
     },
@@ -43,19 +47,22 @@
              "nombreMaterial":"ACIDO ACETIL SALICILICO CM 100MG",
              "dosis":1,
              "dias":30,
-             "cantidadDias":1
+             "cantidadDias":1,
+             "medicamentoControlado": false
           },
           {
              "nombreMaterial":"AMLODIPINO CM 5 MG",
              "dosis":1,
              "dias":30,
-             "cantidadDias":1
+             "cantidadDias":1,
+             "medicamentoControlado": false
           },
           {
              "nombreMaterial":"ATORVASTATINA CM 40 MG",
              "dosis":1,
              "dias":30,
-             "cantidadDias":1
+             "cantidadDias":1,
+             "medicamentoControlado": false
           }
        ]
     }
