@@ -1,5 +1,5 @@
 const supertest = require("supertest");
-const app = require("../index");
+const app = require("../app");
 const mongoose = require("mongoose");
 const Recetas = require("../models/Recetas");
 const recetasSeed = require("../testSeeds/recetasSeed.json");
