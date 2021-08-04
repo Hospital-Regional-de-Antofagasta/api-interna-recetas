@@ -33,7 +33,11 @@ const recetaGuardar = [
     numeroRecetaOriginal: 25097980,
     tipoRecetaOriginal: 5,
     medicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
-    numeroPaciente: 306211,
+    numeroPaciente: {
+      numero: 306211,
+      codigoEstablecimiento: "E01",
+      nombreEstablecimiento: "Hospital Regional de Antofagasta",
+    },
     patologiaCronica: "Hipertensión - Coronario",
     recetaRetenida: false,
     pases: [
@@ -78,7 +82,11 @@ const recetaGuardar = [
     numeroRecetaOriginal: 25097981,
     tipoRecetaOriginal: 5,
     medicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
-    numeroPaciente: 306211,
+    numeroPaciente: {
+      numero: 306211,
+      codigoEstablecimiento: "E01",
+      nombreEstablecimiento: "Hospital Regional de Antofagasta",
+    },
     patologiaCronica: "Hipertensión - Coronario",
     recetaRetenida: false,
     pases: [
@@ -123,7 +131,11 @@ const recetaGuardar = [
     numeroRecetaOriginal: 25097982,
     tipoRecetaOriginal: 5,
     medicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
-    numeroPaciente: 306211,
+    numeroPaciente: {
+      numero: 306211,
+      codigoEstablecimiento: "E01",
+      nombreEstablecimiento: "Hospital Regional de Antofagasta",
+    },
     patologiaCronica: "Hipertensión - Coronario",
     recetaRetenida: false,
     pases: [
@@ -213,7 +225,7 @@ describe("Endpoints recetas", () => {
       expect(response.body.medicoPrescriptor).toBe(
         recetaGuardar[2].medicoPrescriptor
       );
-      expect(response.body.numeroPaciente).toBe(
+      expect(response.body.numeroPaciente).toStrictEqual(
         recetaGuardar[2].numeroPaciente
       );
       expect(response.body.patologiaCronica).toBe(
@@ -276,8 +288,14 @@ describe("Endpoints recetas", () => {
       expect(recetaObtenida.medicoPrescriptor).toBe(
         recetaGuardar[0].medicoPrescriptor
       );
-      expect(recetaObtenida.numeroPaciente).toBe(
-        recetaGuardar[0].numeroPaciente
+      expect(recetaObtenida.numeroPaciente.numero).toBe(
+        recetaGuardar[0].numeroPaciente.numero
+      );
+      expect(recetaObtenida.numeroPaciente.codigoEstablecimiento).toBe(
+        recetaGuardar[0].numeroPaciente.codigoEstablecimiento
+      );
+      expect(recetaObtenida.numeroPaciente.nombreEstablecimiento).toBe(
+        recetaGuardar[0].numeroPaciente.nombreEstablecimiento
       );
       expect(recetaObtenida.patologiaCronica).toBe(
         recetaGuardar[0].patologiaCronica

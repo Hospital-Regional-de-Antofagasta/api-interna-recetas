@@ -3,7 +3,12 @@
     "numeroRecetaOriginal": "25097726",
     "tipoRecetaOriginal": 5,
     "medicoPrescriptor": "GABRIEL MARTINEZ FUENTES",
-    "numeroPaciente": "10016",
+    "numeroPaciente": 
+      {
+        "numero": 10016,
+        "codigoEstablecimiento": "E01",
+        "nombreEstablecimiento": "Hospital Regional de Antofagasta"
+      },
     "patologiaCronica": "Demencia y Trastornos Mentales Organicos",
     "recetaRetenida": false,
     "pases": [
@@ -34,7 +39,12 @@
     "numeroRecetaOriginal": "25097740",
     "tipoRecetaOriginal": 5,
     "medicoPrescriptor": "GABRIEL MARTINEZ FUENTES",
-    "numeroPaciente": "10016",
+    "numeroPaciente": 
+      {
+        "numero": 10016,
+        "codigoEstablecimiento": "E01",
+        "nombreEstablecimiento": "Hospital Regional de Antofagasta"
+      },
     "patologiaCronica": "Demencia y Trastornos Mentales Organicos",
     "recetaRetenida": false,
     "pases": [
@@ -65,7 +75,12 @@
     "numeroRecetaOriginal": "25097789",
     "tipoRecetaOriginal": 5,
     "medicoPrescriptor": "GUILLERMO  EDUARDO ILLANES BROCHET",
-    "numeroPaciente": "74405",
+    "numeroPaciente": 
+      {
+        "numero": 74405,
+        "codigoEstablecimiento": "E01",
+        "nombreEstablecimiento": "Hospital Regional de Antofagasta"
+      },
     "patologiaCronica": "Hipertensión - Coronario",
     "recetaRetenida": false,
     "pases": [
