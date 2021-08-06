@@ -184,7 +184,7 @@ describe("Endpoints recetas", () => {
     it("Should not get last receta from database", async (done) => {
       // ejecutar endpoint
       const response = await request
-        .get("/hra/hradb_a_mongodb/recetas/ultimo/5")
+        .get("/hra/hradb_a_mongodb/recetas/ultimo/5/E01")
         .set("Authorization", "no-token");
       // verificar que retorno el status code correcto
       expect(response.status).toBe(401);
@@ -197,7 +197,7 @@ describe("Endpoints recetas", () => {
       await Recetas.deleteMany().exec();
       // ejecutar endpoint
       const response = await request
-        .get("/hra/hradb_a_mongodb/recetas/ultimo/5")
+        .get("/hra/hradb_a_mongodb/recetas/ultimo/5/E01")
         .set("Authorization", token);
       // verificar que retorno el status code correcto
       expect(response.status).toBe(200);
@@ -211,7 +211,7 @@ describe("Endpoints recetas", () => {
       await Recetas.create(recetaGuardar);
       // ejecutar endpoint
       const response = await request
-        .get("/hra/hradb_a_mongodb/recetas/ultimo/5")
+        .get("/hra/hradb_a_mongodb/recetas/ultimo/5/E01")
         .set("Authorization", token);
       // verificar que retorno el status code correcto
       expect(response.status).toBe(200);
