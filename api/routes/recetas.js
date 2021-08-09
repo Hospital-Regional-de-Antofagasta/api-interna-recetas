@@ -6,6 +6,6 @@ const router = express.Router()
 
 router.get('/ultimo/:tipoReceta/:codigoEstablecimiento', isAuthenticated, recetasController.getLast)
 
-router.post('/', isAuthenticated, recetasController.create)
+router.post('', isAuthenticated, recetasController.create)
 
 module.exports = router

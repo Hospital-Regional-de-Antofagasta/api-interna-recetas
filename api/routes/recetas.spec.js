@@ -179,7 +179,7 @@ const recetaGuardar = [
 ];
 
 describe("Endpoints recetas", () => {
-  describe("Get last receta", () => {
+  describe("GET /hra/hradb_a_mongodb/recetas/ultimo/:tipoReceta/:codigoEstablecimiento", () => {
     // test autorizacion
     it("Should not get last receta from database", async (done) => {
       // ejecutar endpoint
@@ -244,12 +244,12 @@ describe("Endpoints recetas", () => {
       done();
     });
   });
-  describe("Save receta", () => {
+  describe("POST /hra/hradb_a_mongodb/recetas", () => {
     // test autorizacion
     it("Should not save receta to database", async (done) => {
       // ejecutar endpoint
       const response = await request
-        .post("/hra/hradb_a_mongodb/recetas/")
+        .post("/hra/hradb_a_mongodb/recetas")
         .set("Authorization", "no-token")
         .send(recetaGuardar);
       // obtener la receta que no se guardo
@@ -268,7 +268,7 @@ describe("Endpoints recetas", () => {
     it("Should save receta to database", async (done) => {
       // ejecutar endpoint
       const response = await request
-        .post("/hra/hradb_a_mongodb/recetas/")
+        .post("/hra/hradb_a_mongodb/recetas")
         .set("Authorization", token)
         .send(recetaGuardar);
       // obtener la receta que se guardo
