@@ -9,8 +9,8 @@ const Receta = mongoose.model(
       tipoRecetaOriginal: Number,
       medicoPrescriptor: String,
       numeroPaciente: {
-        numero: {type: Number, require: true, unique: true},
-        codigoEstablecimiento: {type: String, require: true, unique: true},
+        numero: {type: Number, require: true},
+        codigoEstablecimiento: {type: String, require: true},
         nombreEstablecimiento: String,
       },
       patologiaCronica: String,
@@ -32,8 +32,9 @@ const Receta = mongoose.model(
         },
       ],
     },
-    { timestamps: true }
-  )
+    { timestamps: true },
+  ).index({'numeroPaciente.numero':1,'numeroPaciente.codigoEstablecimiento':1},{unique: true})
 );
+
 
 module.exports = Receta;
