@@ -360,5 +360,102 @@ describe("Endpoints recetas", () => {
 
       done();
     });
+    // guardar dos recetas del mismo paciente
+    it("Should save receta to database of same paciente", async (done) => {
+      recetaGuardar[0].numeroPaciente.numero= 10016
+      // ejecutar endpoint
+      const response = await request
+        .post("/hra/hradb-a-mongodb/recetas")
+        .set("Authorization", token)
+        .send(recetaGuardar);
+      // obtener la receta que se guardo
+      const recetaObtenida = await Recetas.findOne({
+        numeroRecetaOriginal: recetaGuardar[0].numeroRecetaOriginal,
+        tipoRecetaOriginal: recetaGuardar[0].tipoRecetaOriginal,
+      }).exec();
+      // verificar que retorno el status code correcto
+      expect(response.status).toBe(201);
+      // verificar que la receta obtenida es igual a la que se guardo
+      expect(recetaObtenida.numeroRecetaOriginal).toBe(
+        recetaGuardar[0].numeroRecetaOriginal
+      );
+      expect(recetaObtenida.tipoRecetaOriginal).toBe(
+        recetaGuardar[0].tipoRecetaOriginal
+      );
+      expect(recetaObtenida.medicoPrescriptor).toBe(
+        recetaGuardar[0].medicoPrescriptor
+      );
+      expect(recetaObtenida.numeroPaciente.numero).toBe(
+        recetaGuardar[0].numeroPaciente.numero
+      );
+      expect(recetaObtenida.numeroPaciente.codigoEstablecimiento).toBe(
+        recetaGuardar[0].numeroPaciente.codigoEstablecimiento
+      );
+      expect(recetaObtenida.numeroPaciente.nombreEstablecimiento).toBe(
+        recetaGuardar[0].numeroPaciente.nombreEstablecimiento
+      );
+      expect(recetaObtenida.patologiaCronica).toBe(
+        recetaGuardar[0].patologiaCronica
+      );
+      expect(recetaObtenida.recetaRetenida).toBe(
+        recetaGuardar[0].recetaRetenida
+      );
+      expect(recetaObtenida.pases[0].numeroReceta).toBe(
+        recetaGuardar[0].pases[0].numeroReceta
+      );
+      expect(Date.parse(recetaObtenida.pases[0].fechaEmision)).toBe(
+        Date.parse(recetaGuardar[0].pases[0].fechaEmision)
+      );
+      expect(recetaObtenida.pases[0].numeroPase).toBe(
+        recetaGuardar[0].pases[0].numeroPase
+      );
+      expect(recetaObtenida.medicamentos[0].nombreMaterial).toBe(
+        recetaGuardar[0].medicamentos[0].nombreMaterial
+      );
+      expect(recetaObtenida.medicamentos[0].dosis).toBe(
+        recetaGuardar[0].medicamentos[0].dosis
+      );
+      expect(recetaObtenida.medicamentos[0].dias).toBe(
+        recetaGuardar[0].medicamentos[0].dias
+      );
+      expect(recetaObtenida.medicamentos[0].cantidadDias).toBe(
+        recetaGuardar[0].medicamentos[0].cantidadDias
+      );
+      expect(recetaObtenida.medicamentos[0].medicamentoControlado).toBe(
+        recetaGuardar[0].medicamentos[0].medicamentoControlado
+      );
+      expect(recetaObtenida.medicamentos[1].nombreMaterial).toBe(
+        recetaGuardar[0].medicamentos[1].nombreMaterial
+      );
+      expect(recetaObtenida.medicamentos[1].dosis).toBe(
+        recetaGuardar[0].medicamentos[1].dosis
+      );
+      expect(recetaObtenida.medicamentos[1].dias).toBe(
+        recetaGuardar[0].medicamentos[1].dias
+      );
+      expect(recetaObtenida.medicamentos[1].cantidadDias).toBe(
+        recetaGuardar[0].medicamentos[1].cantidadDias
+      );
+      expect(recetaObtenida.medicamentos[1].medicamentoControlado).toBe(
+        recetaGuardar[0].medicamentos[1].medicamentoControlado
+      );
+      expect(recetaObtenida.medicamentos[2].nombreMaterial).toBe(
+        recetaGuardar[0].medicamentos[2].nombreMaterial
+      );
+      expect(recetaObtenida.medicamentos[2].dosis).toBe(
+        recetaGuardar[0].medicamentos[2].dosis
+      );
+      expect(recetaObtenida.medicamentos[2].dias).toBe(
+        recetaGuardar[0].medicamentos[2].dias
+      );
+      expect(recetaObtenida.medicamentos[2].cantidadDias).toBe(
+        recetaGuardar[0].medicamentos[2].cantidadDias
+      );
+      expect(recetaObtenida.medicamentos[2].medicamentoControlado).toBe(
+        recetaGuardar[0].medicamentos[2].medicamentoControlado
+      );
+      recetaGuardar[0].numeroPaciente.numero= 306211
+      done();
+    });
   });
 });
