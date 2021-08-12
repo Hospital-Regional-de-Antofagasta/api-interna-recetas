@@ -33,7 +33,7 @@ const Receta = mongoose.model(
       ],
     },
     { timestamps: true },
-  ).index({'numeroPaciente.numero':1,'numeroPaciente.codigoEstablecimiento':1},{unique: true})
+  )//.index({'numeroPaciente.numero':1,'numeroPaciente.codigoEstablecimiento':1},{unique: true})
 );
 
 
