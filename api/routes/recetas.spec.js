@@ -36,6 +36,9 @@ const recetaGuardar = [
     numeroPaciente: {
       numero: 306211,
       codigoEstablecimiento: "E01",
+      hospital: {
+        E01: 1
+      },
       nombreEstablecimiento: "Hospital Regional de Antofagasta",
     },
     patologiaCronica: "Hipertensión - Coronario",
@@ -85,6 +88,9 @@ const recetaGuardar = [
     numeroPaciente: {
       numero: 306211,
       codigoEstablecimiento: "E01",
+      hospital: {
+        E01: 1
+      },
       nombreEstablecimiento: "Hospital Regional de Antofagasta",
     },
     patologiaCronica: "Hipertensión - Coronario",
@@ -134,6 +140,9 @@ const recetaGuardar = [
     numeroPaciente: {
       numero: 306211,
       codigoEstablecimiento: "E01",
+      hospital: {
+        E01: 1
+      },
       nombreEstablecimiento: "Hospital Regional de Antofagasta",
     },
     patologiaCronica: "Hipertensión - Coronario",

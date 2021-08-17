@@ -11,6 +11,7 @@ const Receta = mongoose.model(
       numeroPaciente: {
         numero: {type: Number, require: true},
         codigoEstablecimiento: {type: String, require: true},
+        hospital: {},
         nombreEstablecimiento: String,
       },
       patologiaCronica: String,

@@ -7,6 +7,9 @@
       {
         "numero": 10016,
         "codigoEstablecimiento": "E01",
+              "hospital": {
+                "E01": 1
+              },
         "nombreEstablecimiento": "Hospital Regional de Antofagasta"
       },
     "patologiaCronica": "Demencia y Trastornos Mentales Organicos",
@@ -43,6 +46,9 @@
       {
         "numero": 10016,
         "codigoEstablecimiento": "E01",
+              "hospital": {
+                "E01": 1
+              },
         "nombreEstablecimiento": "Hospital Regional de Antofagasta"
       },
     "patologiaCronica": "Demencia y Trastornos Mentales Organicos",
@@ -79,6 +85,9 @@
       {
         "numero": 74405,
         "codigoEstablecimiento": "E01",
+              "hospital": {
+                "E01": 1
+              },
         "nombreEstablecimiento": "Hospital Regional de Antofagasta"
       },
     "patologiaCronica": "Hipertensión - Coronario",
