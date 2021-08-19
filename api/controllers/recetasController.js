@@ -17,7 +17,21 @@ exports.getLast = async (req, res) => {
 
 exports.create = async (req, res) => {
   try {
-    const recetas = req.body;
+    const recetas = req.body
+    const hospital = {};
+    let propiedad = ''
+    hospital[propiedad] = 1;
+    if(Array.isArray(recetas)){
+      recetas.forEach(receta => {
+        propiedad = `${receta.numeroPaciente.codigoEstablecimiento}`;
+        hospital[propiedad] = 1;
+        receta.numeroPaciente.hospital = hospital
+      });
+    }else{//Sólo un objeto
+      propiedad = `${recetas.numeroPaciente.codigoEstablecimiento}`;
+      hospital[propiedad] = 1;
+      recetas.numeroPaciente.hospital = hospital
+    }    
     await Recetas.create(recetas);
     res.sendStatus(201);
   } catch (error) {

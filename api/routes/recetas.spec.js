@@ -37,7 +37,7 @@ const recetaGuardar = [
       numero: 306211,
       codigoEstablecimiento: "E01",
       hospital: {
-        E01: 1
+        E01: 1,
       },
       nombreEstablecimiento: "Hospital Regional de Antofagasta",
     },
@@ -89,7 +89,7 @@ const recetaGuardar = [
       numero: 306211,
       codigoEstablecimiento: "E01",
       hospital: {
-        E01: 1
+        E01: 1,
       },
       nombreEstablecimiento: "Hospital Regional de Antofagasta",
     },
@@ -141,7 +141,7 @@ const recetaGuardar = [
       numero: 306211,
       codigoEstablecimiento: "E01",
       hospital: {
-        E01: 1
+        E01: 1,
       },
       nombreEstablecimiento: "Hospital Regional de Antofagasta",
     },
@@ -275,11 +275,12 @@ describe("Endpoints recetas", () => {
     });
     // test guardar receta
     it("Should save receta to database", async (done) => {
+      recetaGuardar[0].numeroPaciente.hospital = {};
       // ejecutar endpoint
       const response = await request
         .post("/hra/hradb-a-mongodb/recetas")
         .set("Authorization", token)
-        .send(recetaGuardar);
+        .send(recetaGuardar[0]);
       // obtener la receta que se guardo
       const recetaObtenida = await Recetas.findOne({
         numeroRecetaOriginal: recetaGuardar[0].numeroRecetaOriginal,
@@ -366,12 +367,16 @@ describe("Endpoints recetas", () => {
       expect(recetaObtenida.medicamentos[2].medicamentoControlado).toBe(
         recetaGuardar[0].medicamentos[2].medicamentoControlado
       );
-
+      recetaGuardar[0].numeroPaciente.hospital = {
+        E01: 1,
+      };
       done();
     });
     // guardar dos recetas del mismo paciente
     it("Should save receta to database of same paciente", async (done) => {
-      recetaGuardar[0].numeroPaciente.numero= 10016
+      recetaGuardar[0].numeroPaciente.numero = 10016;
+      recetaGuardar[0].numeroPaciente.hospital = {};
+      recetaGuardar[1].numeroPaciente.hospital = {};
       // ejecutar endpoint
       const response = await request
         .post("/hra/hradb-a-mongodb/recetas")
@@ -463,7 +468,13 @@ describe("Endpoints recetas", () => {
       expect(recetaObtenida.medicamentos[2].medicamentoControlado).toBe(
         recetaGuardar[0].medicamentos[2].medicamentoControlado
       );
-      recetaGuardar[0].numeroPaciente.numero= 306211
+      recetaGuardar[0].numeroPaciente.numero = 306211;
+      recetaGuardar[0].numeroPaciente.hospital = {
+        E01: 1,
+      };
+      recetaGuardar[1].numeroPaciente.hospital = {
+        E01: 1,
+      };
       done();
     });
   });
