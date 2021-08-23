@@ -33,14 +33,7 @@ const recetaGuardar = [
     numeroRecetaOriginal: 25097980,
     tipoRecetaOriginal: 5,
     medicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
-    numeroPaciente: {
-      numero: 306211,
-      codigoEstablecimiento: "E01",
-      hospital: {
-        E01: 1,
-      },
-      nombreEstablecimiento: "Hospital Regional de Antofagasta",
-    },
+    numeroPaciente: 306211,
     patologiaCronica: "Hipertensión - Coronario",
     recetaRetenida: false,
     pases: [
@@ -85,14 +78,7 @@ const recetaGuardar = [
     numeroRecetaOriginal: 25097981,
     tipoRecetaOriginal: 5,
     medicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
-    numeroPaciente: {
-      numero: 306211,
-      codigoEstablecimiento: "E01",
-      hospital: {
-        E01: 1,
-      },
-      nombreEstablecimiento: "Hospital Regional de Antofagasta",
-    },
+    numeroPaciente: 306211,
     patologiaCronica: "Hipertensión - Coronario",
     recetaRetenida: false,
     pases: [
@@ -137,14 +123,7 @@ const recetaGuardar = [
     numeroRecetaOriginal: 25097982,
     tipoRecetaOriginal: 5,
     medicoPrescriptor: "VICTOR ALEJANDRO VALDIVIA URRA",
-    numeroPaciente: {
-      numero: 306211,
-      codigoEstablecimiento: "E01",
-      hospital: {
-        E01: 1,
-      },
-      nombreEstablecimiento: "Hospital Regional de Antofagasta",
-    },
+    numeroPaciente: 306211,
     patologiaCronica: "Hipertensión - Coronario",
     recetaRetenida: false,
     pases: [
@@ -193,7 +172,7 @@ describe("Endpoints recetas", () => {
     it("Should not get last receta from database", async (done) => {
       // ejecutar endpoint
       const response = await request
-        .get("/hra/hradb-a-mongodb/recetas/ultimo/E01/5")
+        .get("/hra/hradb-a-mongodb/recetas/ultimo/5")
         .set("Authorization", "no-token");
       // verificar que retorno el status code correcto
       expect(response.status).toBe(401);
@@ -206,7 +185,7 @@ describe("Endpoints recetas", () => {
       await Recetas.deleteMany().exec();
       // ejecutar endpoint
       const response = await request
-        .get("/hra/hradb-a-mongodb/recetas/ultimo/E01/5")
+        .get("/hra/hradb-a-mongodb/recetas/ultimo/5")
         .set("Authorization", token);
       // verificar que retorno el status code correcto
       expect(response.status).toBe(200);
@@ -220,7 +199,7 @@ describe("Endpoints recetas", () => {
       await Recetas.create(recetaGuardar);
       // ejecutar endpoint
       const response = await request
-        .get("/hra/hradb-a-mongodb/recetas/ultimo/E01/5")
+        .get("/hra/hradb-a-mongodb/recetas/ultimo/5")
         .set("Authorization", token);
       // verificar que retorno el status code correcto
       expect(response.status).toBe(200);
@@ -234,7 +213,7 @@ describe("Endpoints recetas", () => {
       expect(response.body.medicoPrescriptor).toBe(
         recetaGuardar[2].medicoPrescriptor
       );
-      expect(response.body.numeroPaciente).toStrictEqual(
+      expect(response.body.numeroPaciente).toBe(
         recetaGuardar[2].numeroPaciente
       );
       expect(response.body.patologiaCronica).toBe(
@@ -275,13 +254,12 @@ describe("Endpoints recetas", () => {
     });
     // test guardar receta
     it("Should save receta to database", async (done) => {
-      recetaGuardar[0].numeroPaciente.hospital = {};
-      // ejecutar endpoint
+      // Ejecutar endpoint.
       const response = await request
         .post("/hra/hradb-a-mongodb/recetas")
         .set("Authorization", token)
         .send(recetaGuardar[0]);
-      // obtener la receta que se guardo
+      // Obtener la receta que se guardó.
       const recetaObtenida = await Recetas.findOne({
         numeroRecetaOriginal: recetaGuardar[0].numeroRecetaOriginal,
         tipoRecetaOriginal: recetaGuardar[0].tipoRecetaOriginal,
@@ -298,14 +276,8 @@ describe("Endpoints recetas", () => {
       expect(recetaObtenida.medicoPrescriptor).toBe(
         recetaGuardar[0].medicoPrescriptor
       );
-      expect(recetaObtenida.numeroPaciente.numero).toBe(
-        recetaGuardar[0].numeroPaciente.numero
-      );
-      expect(recetaObtenida.numeroPaciente.codigoEstablecimiento).toBe(
-        recetaGuardar[0].numeroPaciente.codigoEstablecimiento
-      );
-      expect(recetaObtenida.numeroPaciente.nombreEstablecimiento).toBe(
-        recetaGuardar[0].numeroPaciente.nombreEstablecimiento
+      expect(recetaObtenida.numeroPaciente).toBe(
+        recetaGuardar[0].numeroPaciente
       );
       expect(recetaObtenida.patologiaCronica).toBe(
         recetaGuardar[0].patologiaCronica
@@ -367,16 +339,11 @@ describe("Endpoints recetas", () => {
       expect(recetaObtenida.medicamentos[2].medicamentoControlado).toBe(
         recetaGuardar[0].medicamentos[2].medicamentoControlado
       );
-      recetaGuardar[0].numeroPaciente.hospital = {
-        E01: 1,
-      };
       done();
     });
     // guardar dos recetas del mismo paciente
     it("Should save receta to database of same paciente", async (done) => {
-      recetaGuardar[0].numeroPaciente.numero = 10016;
-      recetaGuardar[0].numeroPaciente.hospital = {};
-      recetaGuardar[1].numeroPaciente.hospital = {};
+      recetaGuardar[0].numeroPaciente = 10016;
       // ejecutar endpoint
       const response = await request
         .post("/hra/hradb-a-mongodb/recetas")
@@ -399,14 +366,8 @@ describe("Endpoints recetas", () => {
       expect(recetaObtenida.medicoPrescriptor).toBe(
         recetaGuardar[0].medicoPrescriptor
       );
-      expect(recetaObtenida.numeroPaciente.numero).toBe(
-        recetaGuardar[0].numeroPaciente.numero
-      );
-      expect(recetaObtenida.numeroPaciente.codigoEstablecimiento).toBe(
-        recetaGuardar[0].numeroPaciente.codigoEstablecimiento
-      );
-      expect(recetaObtenida.numeroPaciente.nombreEstablecimiento).toBe(
-        recetaGuardar[0].numeroPaciente.nombreEstablecimiento
+      expect(recetaObtenida.numeroPaciente).toBe(
+        recetaGuardar[0].numeroPaciente
       );
       expect(recetaObtenida.patologiaCronica).toBe(
         recetaGuardar[0].patologiaCronica
@@ -468,13 +429,8 @@ describe("Endpoints recetas", () => {
       expect(recetaObtenida.medicamentos[2].medicamentoControlado).toBe(
         recetaGuardar[0].medicamentos[2].medicamentoControlado
       );
-      recetaGuardar[0].numeroPaciente.numero = 306211;
-      recetaGuardar[0].numeroPaciente.hospital = {
-        E01: 1,
-      };
-      recetaGuardar[1].numeroPaciente.hospital = {
-        E01: 1,
-      };
+      recetaGuardar[0].numeroPaciente = 306211;
+      
       done();
     });
   });

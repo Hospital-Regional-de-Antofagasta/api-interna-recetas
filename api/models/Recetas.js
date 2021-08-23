@@ -8,12 +8,7 @@ const Receta = mongoose.model(
       numeroRecetaOriginal: Number,
       tipoRecetaOriginal: Number,
       medicoPrescriptor: String,
-      numeroPaciente: {
-        numero: {type: Number, require: true},
-        codigoEstablecimiento: {type: String, require: true},
-        hospital: {},
-        nombreEstablecimiento: String,
-      },
+      numeroPaciente: {type: Number, require: true},
       patologiaCronica: String,
       recetaRetenida: Boolean,
       pases: [
