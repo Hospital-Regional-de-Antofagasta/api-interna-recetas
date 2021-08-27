@@ -19,14 +19,16 @@
         "dosis": 1,
         "dias": 30,
         "cantidadDias": 1,
-        "medicamentoControlado": false
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
       },
       {
         "nombreMaterial": "MEMANTINE CM 10 MG",
         "dosis": 1,
         "dias": 30,
         "cantidadDias": 1,
-        "medicamentoControlado": false
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
       }
     ]
   },
@@ -50,14 +52,16 @@
         "dosis": 1,
         "dias": 30,
         "cantidadDias": 1,
-        "medicamentoControlado": false
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
       },
       {
         "nombreMaterial": "MEMANTINE CM 10 MG",
         "dosis": 1,
         "dias": 30,
         "cantidadDias": 1,
-        "medicamentoControlado": false
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
       }
     ]
   },
@@ -81,21 +85,24 @@
         "dosis": 1,
         "dias": 30,
         "cantidadDias": 1,
-        "medicamentoControlado": false
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
       },
       {
         "nombreMaterial": "AMLODIPINO CM 5 MG",
         "dosis": 1,
         "dias": 30,
         "cantidadDias": 1,
-        "medicamentoControlado": false
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
       },
       {
         "nombreMaterial": "ATORVASTATINA CM 40 MG",
         "dosis": 1,
         "dias": 30,
         "cantidadDias": 1,
-        "medicamentoControlado": false
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
       }
     ]
   }

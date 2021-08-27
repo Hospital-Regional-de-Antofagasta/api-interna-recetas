@@ -25,6 +25,7 @@ const Receta = mongoose.model(
           dias: Number,
           cantidadDias: Number,
           medicamentoControlado: Boolean,
+          mensaje: String,
         },
       ],
     },

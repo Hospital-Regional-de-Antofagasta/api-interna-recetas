@@ -55,14 +55,14 @@ const recetaGuardar = [
         nombreMaterial: "ACIDO ACETIL SALICILICO CM 100MG",
         dosis: 1,
         dias: 30,
-        cantidadDias: 1,
+        cantidadDias: 1.01,
         medicamentoControlado: false,
       },
       {
         nombreMaterial: "ENALAPRILA CM 10 MG",
         dosis: 1,
         dias: 30,
-        cantidadDias: 1,
+        cantidadDias: 0.99,
         medicamentoControlado: false,
       },
       {
@@ -309,6 +309,7 @@ describe("Endpoints recetas", () => {
       expect(recetaObtenida.medicamentos[0].medicamentoControlado).toBe(
         recetaGuardar[0].medicamentos[0].medicamentoControlado
       );
+      expect(recetaObtenida.medicamentos[0].mensaje).toBe('1 cada 24 Hrs. por 30 día(s)');
       expect(recetaObtenida.medicamentos[1].nombreMaterial).toBe(
         recetaGuardar[0].medicamentos[1].nombreMaterial
       );
@@ -324,6 +325,7 @@ describe("Endpoints recetas", () => {
       expect(recetaObtenida.medicamentos[1].medicamentoControlado).toBe(
         recetaGuardar[0].medicamentos[1].medicamentoControlado
       );
+      expect(recetaObtenida.medicamentos[1].mensaje).toBe('1 mensual por 30 mes(es)');
       expect(recetaObtenida.medicamentos[2].nombreMaterial).toBe(
         recetaGuardar[0].medicamentos[2].nombreMaterial
       );
@@ -339,6 +341,23 @@ describe("Endpoints recetas", () => {
       expect(recetaObtenida.medicamentos[2].medicamentoControlado).toBe(
         recetaGuardar[0].medicamentos[2].medicamentoControlado
       );
+      expect(recetaObtenida.medicamentos[2].mensaje).toBe('1 semanal por 30 semana(s)');
+      expect(recetaObtenida.medicamentos[3].nombreMaterial).toBe(
+        recetaGuardar[0].medicamentos[3].nombreMaterial
+      );
+      expect(recetaObtenida.medicamentos[3].dosis).toBe(
+        recetaGuardar[0].medicamentos[3].dosis
+      );
+      expect(recetaObtenida.medicamentos[3].dias).toBe(
+        recetaGuardar[0].medicamentos[3].dias
+      );
+      expect(recetaObtenida.medicamentos[3].cantidadDias).toBe(
+        recetaGuardar[0].medicamentos[3].cantidadDias
+      );
+      expect(recetaObtenida.medicamentos[3].medicamentoControlado).toBe(
+        recetaGuardar[0].medicamentos[3].medicamentoControlado
+      );
+      expect(recetaObtenida.medicamentos[3].mensaje).toBe('1 cada 24 Hrs. por 30 día(s)');
       done();
     });
     // guardar dos recetas del mismo paciente
@@ -399,6 +418,7 @@ describe("Endpoints recetas", () => {
       expect(recetaObtenida.medicamentos[0].medicamentoControlado).toBe(
         recetaGuardar[0].medicamentos[0].medicamentoControlado
       );
+      expect(recetaObtenida.medicamentos[0].mensaje).toBe('1 cada 24 Hrs. por 30 día(s)');
       expect(recetaObtenida.medicamentos[1].nombreMaterial).toBe(
         recetaGuardar[0].medicamentos[1].nombreMaterial
       );
@@ -414,6 +434,7 @@ describe("Endpoints recetas", () => {
       expect(recetaObtenida.medicamentos[1].medicamentoControlado).toBe(
         recetaGuardar[0].medicamentos[1].medicamentoControlado
       );
+      expect(recetaObtenida.medicamentos[1].mensaje).toBe('1 mensual por 30 mes(es)');
       expect(recetaObtenida.medicamentos[2].nombreMaterial).toBe(
         recetaGuardar[0].medicamentos[2].nombreMaterial
       );
@@ -429,8 +450,24 @@ describe("Endpoints recetas", () => {
       expect(recetaObtenida.medicamentos[2].medicamentoControlado).toBe(
         recetaGuardar[0].medicamentos[2].medicamentoControlado
       );
-      recetaGuardar[0].numeroPaciente = 306211;
-      
+      expect(recetaObtenida.medicamentos[2].mensaje).toBe('1 semanal por 30 semana(s)');
+      expect(recetaObtenida.medicamentos[3].nombreMaterial).toBe(
+        recetaGuardar[0].medicamentos[3].nombreMaterial
+      );
+      expect(recetaObtenida.medicamentos[3].dosis).toBe(
+        recetaGuardar[0].medicamentos[3].dosis
+      );
+      expect(recetaObtenida.medicamentos[3].dias).toBe(
+        recetaGuardar[0].medicamentos[3].dias
+      );
+      expect(recetaObtenida.medicamentos[3].cantidadDias).toBe(
+        recetaGuardar[0].medicamentos[3].cantidadDias
+      );
+      expect(recetaObtenida.medicamentos[3].medicamentoControlado).toBe(
+        recetaGuardar[0].medicamentos[3].medicamentoControlado
+      );
+      expect(recetaObtenida.medicamentos[3].mensaje).toBe('1 cada 24 Hrs. por 30 día(s)');
+      recetaGuardar[0].numeroPaciente = 306211;      
       done();
     });
   });
