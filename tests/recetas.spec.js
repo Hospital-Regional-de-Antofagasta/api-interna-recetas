@@ -12,7 +12,7 @@ beforeEach(async () => {
   // cerrar la coneccion que se crea en el index.js
   await mongoose.disconnect();
   // conectarse a la bd de testing
-  await mongoose.connect(`${process.env.MONGO_URI_TEST}recetas_test`, {
+  await mongoose.connect(`${process.env.MONGO_URI}/recetas_test`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
