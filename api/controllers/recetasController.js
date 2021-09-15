@@ -17,45 +17,6 @@ exports.getLast = async (req, res) => {
 exports.create = async (req, res) => {
   try {
     const recetas = req.body;
-    if (Array.isArray(recetas)) {
-      recetas.forEach((receta) => {
-        receta.medicamentos.forEach((medicamento) => {
-          let mensaje = medicamento.dosis + " ";
-          switch (medicamento.cantidadDias) {
-            case 0.99:
-              mensaje += "semanal por " + medicamento.dias + " semana(s)";
-              break;
-            case 1.01:
-              mensaje += "mensual por " + medicamento.dias + " mes(es)";
-              break;
-            default:
-              const horas = 24 / medicamento.cantidadDias;
-              mensaje +=
-                "cada " + horas + " Hrs. por " + medicamento.dias + " día(s)";
-              break;
-          }
-          medicamento.mensaje = mensaje;
-        });
-      });
-    } else {
-      recetas.medicamentos.forEach((medicamento) => {
-        let mensaje = medicamento.dosis + " ";
-          switch (medicamento.cantidadDias) {
-            case 0.99:
-              mensaje += "semanal por " + medicamento.dias + " semana(s)";
-              break;
-            case 1.01:
-              mensaje += "mensual por " + medicamento.dias + " mes(es)";
-              break;
-            default:
-              const horas = 24 / medicamento.cantidadDias;
-              mensaje +=
-                "cada " + horas + " Hrs. por " + medicamento.dias + " día(s)";
-              break;
-          }
-        medicamento.mensaje = mensaje;
-      });
-    }
     await Recetas.create(recetas);
     res.sendStatus(201);
   } catch (error) {
