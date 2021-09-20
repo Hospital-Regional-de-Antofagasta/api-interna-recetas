@@ -18,6 +18,10 @@ mongoose.connect(connection, {
 
 app.use('/hra/hradb-a-mongodb/recetas', recetas)
 
+app.get("/hradb-a-mongodb/recetas/health", (req, res) => {
+  res.status(200).send("ready");
+});
+
 if (require.main === module) {
   // true if file is executed
   process.on("SIGINT", function () {
