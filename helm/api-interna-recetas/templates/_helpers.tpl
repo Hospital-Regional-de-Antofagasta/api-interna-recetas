@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "api-configuracion-hrapp.name" -}}
+{{- define "api-interna-recetas.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "api-configuracion-hrapp.fullname" -}}
+{{- define "api-interna-recetas.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,23 +26,23 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Define default name for secrets
 */}}
-{{- define "api-configuracion-hrapp.secrets" -}}
-{{- include "api-configuracion-hrapp.fullname" . | printf "%s-secrets" }}
+{{- define "api-interna-recetas.secrets" -}}
+{{- include "api-interna-recetas.fullname" . | printf "%s-secrets" }}
 {{- end }}
 
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "api-configuracion-hrapp.chart" -}}
+{{- define "api-interna-recetas.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "api-configuracion-hrapp.labels" -}}
-helm.sh/chart: {{ include "api-configuracion-hrapp.chart" . }}
-{{ include "api-configuracion-hrapp.selectorLabels" . }}
+{{- define "api-interna-recetas.labels" -}}
+helm.sh/chart: {{ include "api-interna-recetas.chart" . }}
+{{ include "api-interna-recetas.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -52,8 +52,8 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "api-configuracion-hrapp.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "api-configuracion-hrapp.name" . }}
+{{- define "api-interna-recetas.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "api-interna-recetas.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 

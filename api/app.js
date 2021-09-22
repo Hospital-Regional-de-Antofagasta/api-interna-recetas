@@ -20,7 +20,7 @@ app.get("/hradb-a-mongodb/recetas/health", (req, res) => {
   res.status(200).send("ready");
 });
 
-app.use('/hra/hradb-a-mongodb/recetas', recetas)
+app.use('/hradb-a-mongodb/recetas', recetas)
 
 if (require.main === module) {
   // true if file is executed

@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "api-configuracion-hrapp.fullname" . }}
+  name: {{ include "api-interna-recetas.fullname" . }}
   namespace: {{ .Release.Namespace }}
   labels:
-    {{- include "api-configuracion-hrapp.labels" . | nindent 4 }}
+    {{- include "api-interna-recetas.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "api-configuracion-hrapp.selectorLabels" . | nindent 6 }}
+      {{- include "api-interna-recetas.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       annotations:
@@ -20,7 +20,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "api-configuracion-hrapp.selectorLabels" . | nindent 8 }}
+        {{- include "api-interna-recetas.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
@@ -47,15 +47,15 @@ spec:
               value: "{{ .Values.service.targetPort }}"
             - name: HOSTNAME
               value: localhost
-            - name: JWT_SECRET
+            - name: HRADB_A_MONGODB_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: {{ include "api-configuracion-hrapp.secrets" . }}
+                  name: {{ include "api-interna-recetas.secrets" . }}
                   key: api-key
             - name: MONGO_URI
               valueFrom:
                 secretKeyRef:
-                  name: {{ include "api-configuracion-hrapp.secrets" . }}
+                  name: {{ include "api-interna-recetas.secrets" . }}
                   key: mongo
 
           {{- if .Values.resources }}
