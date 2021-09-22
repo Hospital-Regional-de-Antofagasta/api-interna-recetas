@@ -1,8 +1,8 @@
 const supertest = require("supertest");
-const app = require("../app");
+const app = require("../api/app");
 const mongoose = require("mongoose");
-const Recetas = require("../models/Recetas");
-const recetasSeed = require("../testSeeds/recetasSeed.json");
+const Recetas = require("../api/models/Recetas");
+const recetasSeed = require("../tests/testSeeds/recetasSeed.json");
 
 const request = supertest(app);
 
@@ -12,7 +12,7 @@ beforeEach(async () => {
   // cerrar la coneccion que se crea en el index.js
   await mongoose.disconnect();
   // conectarse a la bd de testing
-  await mongoose.connect(`${process.env.MONGO_URI_TEST}recetas_test`, {
+  await mongoose.connect(`${process.env.MONGO_URI}/recetas_test`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
