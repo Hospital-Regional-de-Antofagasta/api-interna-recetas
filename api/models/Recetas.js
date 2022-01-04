@@ -5,29 +5,33 @@ const Receta = mongoose.model(
   "receta",
   new Schema(
     {
-      numeroRecetaOriginal: Number,
-      tipoRecetaOriginal: Number,
+      correlativo: Number,
+      numeroReceta: Number,
+      tipoReceta: Number,
+      rutPaciente: String,
       medicoPrescriptor: String,
-      numeroPaciente: {type: Number, require: true},
-      patologiaCronica: String,
+      patologia: String,
       recetaRetenida: Boolean,
+      fechaEmision: String,
+      codigoEstablecimiento: String,
+      nombreEstablecimiento: String,
       pases: [
         {
           numeroReceta: Number,
-          fechaEmision: Date,
+          fechaEmisionFutura: String,
           numeroPase: Number,
         },
       ],
       medicamentos: [
         {
-          nombreMaterial: String,
+          nombreMedicamento: String,
           medicamentoControlado: Boolean,
           mensaje: String,
         },
       ],
     },
     { timestamps: true },
-  )//.index({'numeroPaciente.numero':1,'numeroPaciente.codigoEstablecimiento':1},{unique: true})
+  )
 );
 
 

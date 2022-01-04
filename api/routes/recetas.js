@@ -1,11 +1,13 @@
 const express = require('express')
-const { isAuthenticated } = require('../middleware/auth')
 const recetasController = require('../controllers/recetasController')
+const { isAuthenticated } = require('../middleware/auth')
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/ultimo/:tipoReceta', isAuthenticated, recetasController.getLast)
+router.post("", isAuthenticated, recetasController.create);
 
-router.post('', isAuthenticated, recetasController.create)
+router.put("", isAuthenticated, recetasController.updateMany);
 
-module.exports = router
+router.delete("", isAuthenticated, recetasController.deleteMany);
+
+module.exports = router;
