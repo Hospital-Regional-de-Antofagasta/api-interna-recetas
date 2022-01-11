@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const recetas = require("./routes/recetas");
+const recetasOld = require("./routes/recetasOld");
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -21,6 +22,8 @@ app.get("/inter-mongo-recetas/health", (req, res) => {
 });
 
 app.use("/inter-mongo-recetas/salida", recetas);
+
+app.use('/hradb-a-mongodb/recetas', recetasOld)
 
 if (require.main === module) {
   // true if file is executed

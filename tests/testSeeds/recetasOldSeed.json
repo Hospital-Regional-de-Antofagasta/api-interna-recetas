@@ -1,0 +1,88 @@
+[
+  {
+    "numeroRecetaOriginal": "25097726",
+    "tipoRecetaOriginal": 5,
+    "medicoPrescriptor": "GABRIEL MARTINEZ FUENTES",
+    "numeroPaciente":10016,
+    "patologiaCronica": "Demencia y Trastornos Mentales Organicos",
+    "recetaRetenida": false,
+    "pases": [
+      {
+        "numeroReceta": "25097731",
+        "fechaEmision": "2021-03-30T03:00:00.000Z",
+        "numeroPase": 6
+      }
+    ],
+    "medicamentos": [
+      {
+        "nombreMaterial": "TRAZODONA 100 MG",
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
+      },
+      {
+        "nombreMaterial": "MEMANTINE CM 10 MG",
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
+      }
+    ]
+  },
+  {
+    "numeroRecetaOriginal": "25097740",
+    "tipoRecetaOriginal": 5,
+    "medicoPrescriptor": "GABRIEL MARTINEZ FUENTES",
+    "numeroPaciente":10016,
+    "patologiaCronica": "Demencia y Trastornos Mentales Organicos",
+    "recetaRetenida": false,
+    "pases": [
+      {
+        "numeroReceta": "25097745",
+        "fechaEmision": "2021-03-30T03:00:00.000Z",
+        "numeroPase": 6
+      }
+    ],
+    "medicamentos": [
+      {
+        "nombreMaterial": "TRAZODONA 100 MG",
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
+      },
+      {
+        "nombreMaterial": "MEMANTINE CM 10 MG",
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
+      }
+    ]
+  },
+  {
+    "numeroRecetaOriginal": "25097789",
+    "tipoRecetaOriginal": 5,
+    "medicoPrescriptor": "GUILLERMO  EDUARDO ILLANES BROCHET",
+    "numeroPaciente": 74405,
+    "patologiaCronica": "Hipertensión - Coronario",
+    "recetaRetenida": false,
+    "pases": [
+      {
+        "numeroReceta": "25097795",
+        "fechaEmision": "2021-03-30T03:00:00.000Z",
+        "numeroPase": 6
+      }
+    ],
+    "medicamentos": [
+      {
+        "nombreMaterial": "ACIDO ACETIL SALICILICO CM 100MG",        
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
+      },
+      {
+        "nombreMaterial": "AMLODIPINO CM 5 MG",
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
+      },
+      {
+        "nombreMaterial": "ATORVASTATINA CM 40 MG",
+        "medicamentoControlado": false,
+        "mensaje": "1 cada 24 HRS. por 30 día(s)"
+      }
+    ]
+  }
+]

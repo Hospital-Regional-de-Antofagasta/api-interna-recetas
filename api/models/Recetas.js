@@ -1,7 +1,15 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const Receta = mongoose.model(
+const env = process.env.NODE_ENV;
+
+let db = "hrapp_recetas";
+
+if (env === "test") db = `${db}_test`;
+
+const conection = mongoose.connection.useDb(db);
+
+const Receta = conection.model(
   "receta",
   new Schema(
     {
@@ -22,17 +30,19 @@ const Receta = mongoose.model(
           numeroPase: { type: Number, require: true },
         },
       ],
-      medicamentos: { type: [
-        {
-          nombreMedicamento: { type: String, require: true },
-          medicamentoControlado: { type: Boolean, default: false },
-          mensaje: { type: String, require: true },
-        },
-      ], require: true }
+      medicamentos: {
+        type: [
+          {
+            nombreMedicamento: { type: String, require: true },
+            medicamentoControlado: { type: Boolean, default: false },
+            mensaje: { type: String, require: true },
+          },
+        ],
+        require: true,
+      },
     },
-    { timestamps: true },
+    { timestamps: true }
   )
 );
-
 
 module.exports = Receta;
