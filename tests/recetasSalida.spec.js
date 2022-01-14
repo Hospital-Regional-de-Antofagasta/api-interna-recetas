@@ -206,15 +206,21 @@ describe("Endpoints recetas salida", () => {
       expect(recetaDespues.nombreEstablecimiento).toBe(
         recetaGuardar.nombreEstablecimiento
       );
-      const pases = []
-      for (let pase of recetaDespues.pases) {
-        pases.push({
-          numeroReceta: pase.numeroReceta,
-          fechaEmisionFutura: pase.fechaEmisionFutura,
-          numeroPase: pase.numeroPase,
-        });
-      }
-      expect(pases).toEqual(recetaGuardar.pases);
+      expect(recetaDespues.pases[0].numeroReceta).toBe(recetaGuardar.pases[0].numeroReceta)
+      expect(Date.parse(recetaDespues.pases[0].fechaEmisionFutura)).toBe(Date.parse(recetaGuardar.pases[0].fechaEmisionFutura))
+      expect(recetaDespues.pases[0].numeroPase).toBe(recetaGuardar.pases[0].numeroPase)
+      expect(recetaDespues.pases[1].numeroReceta).toBe(recetaGuardar.pases[1].numeroReceta)
+      expect(Date.parse(recetaDespues.pases[1].fechaEmisionFutura)).toBe(Date.parse(recetaGuardar.pases[1].fechaEmisionFutura))
+      expect(recetaDespues.pases[1].numeroPase).toBe(recetaGuardar.pases[1].numeroPase)
+      expect(recetaDespues.pases[2].numeroReceta).toBe(recetaGuardar.pases[2].numeroReceta)
+      expect(Date.parse(recetaDespues.pases[2].fechaEmisionFutura)).toBe(Date.parse(recetaGuardar.pases[2].fechaEmisionFutura))
+      expect(recetaDespues.pases[2].numeroPase).toBe(recetaGuardar.pases[2].numeroPase)
+      expect(recetaDespues.pases[3].numeroReceta).toBe(recetaGuardar.pases[3].numeroReceta)
+      expect(Date.parse(recetaDespues.pases[3].fechaEmisionFutura)).toBe(Date.parse(recetaGuardar.pases[3].fechaEmisionFutura))
+      expect(recetaDespues.pases[3].numeroPase).toBe(recetaGuardar.pases[3].numeroPase)
+      expect(recetaDespues.pases[4].numeroReceta).toBe(recetaGuardar.pases[4].numeroReceta)
+      expect(Date.parse(recetaDespues.pases[4].fechaEmisionFutura)).toBe(Date.parse(recetaGuardar.pases[4].fechaEmisionFutura))
+      expect(recetaDespues.pases[4].numeroPase).toBe(recetaGuardar.pases[4].numeroPase)
       const medicamentos = []
       for (let medicamento of recetaDespues.medicamentos) {
         medicamentos.push({
@@ -367,15 +373,21 @@ describe("Endpoints recetas salida", () => {
       expect(recetaDespues.nombreEstablecimiento).toBe(
         recetaActualizar.nombreEstablecimiento
       );
-      const pases = []
-      for (let pase of recetaDespues.pases) {
-        pases.push({
-          numeroReceta: pase.numeroReceta,
-          fechaEmisionFutura: pase.fechaEmisionFutura,
-          numeroPase: pase.numeroPase,
-        });
-      }
-      expect(pases).toEqual(recetaActualizar.pases);
+      expect(recetaDespues.pases[0].numeroReceta).toBe(recetaActualizar.pases[0].numeroReceta)
+      expect(Date.parse(recetaDespues.pases[0].fechaEmisionFutura)).toBe(Date.parse(recetaActualizar.pases[0].fechaEmisionFutura))
+      expect(recetaDespues.pases[0].numeroPase).toBe(recetaActualizar.pases[0].numeroPase)
+      expect(recetaDespues.pases[1].numeroReceta).toBe(recetaActualizar.pases[1].numeroReceta)
+      expect(Date.parse(recetaDespues.pases[1].fechaEmisionFutura)).toBe(Date.parse(recetaActualizar.pases[1].fechaEmisionFutura))
+      expect(recetaDespues.pases[1].numeroPase).toBe(recetaActualizar.pases[1].numeroPase)
+      expect(recetaDespues.pases[2].numeroReceta).toBe(recetaActualizar.pases[2].numeroReceta)
+      expect(Date.parse(recetaDespues.pases[2].fechaEmisionFutura)).toBe(Date.parse(recetaActualizar.pases[2].fechaEmisionFutura))
+      expect(recetaDespues.pases[2].numeroPase).toBe(recetaActualizar.pases[2].numeroPase)
+      expect(recetaDespues.pases[3].numeroReceta).toBe(recetaActualizar.pases[3].numeroReceta)
+      expect(Date.parse(recetaDespues.pases[3].fechaEmisionFutura)).toBe(Date.parse(recetaActualizar.pases[3].fechaEmisionFutura))
+      expect(recetaDespues.pases[3].numeroPase).toBe(recetaActualizar.pases[3].numeroPase)
+      expect(recetaDespues.pases[4].numeroReceta).toBe(recetaActualizar.pases[4].numeroReceta)
+      expect(Date.parse(recetaDespues.pases[4].fechaEmisionFutura)).toBe(Date.parse(recetaActualizar.pases[4].fechaEmisionFutura))
+      expect(recetaDespues.pases[4].numeroPase).toBe(recetaActualizar.pases[4].numeroPase)
       const medicamentos = []
       for (let medicamento of recetaDespues.medicamentos) {
         medicamentos.push({
