@@ -1,11 +1,12 @@
 require("dotenv").config();
-const express = require('express')
-const mongoose = require('mongoose')
-const cors = require('cors')
-const recetas = require('./routes/recetas')
-const app = express()
-app.use(express.json())
-app.use(cors())
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const recetas = require("./routes/recetas");
+const recetasOld = require("./routes/recetasOld");
+const app = express();
+app.use(express.json());
+app.use(cors());
 
 const connection = process.env.MONGO_URI;
 const port = process.env.PORT;
@@ -16,11 +17,13 @@ mongoose.connect(connection, {
   useUnifiedTopology: true,
 });
 
-app.get("/hradb-a-mongodb/recetas/health", (req, res) => {
+app.get("/inter-mongo-recetas/health", (req, res) => {
   res.status(200).send("ready");
 });
 
-app.use('/hradb-a-mongodb/recetas', recetas)
+app.use("/inter-mongo-recetas/salida", recetas);
+
+app.use('/hradb-a-mongodb/recetas', recetasOld)
 
 if (require.main === module) {
   // true if file is executed
@@ -32,4 +35,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = app
+module.exports = app;

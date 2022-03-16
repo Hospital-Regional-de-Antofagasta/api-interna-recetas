@@ -1,21 +1,21 @@
 const supertest = require("supertest");
 const app = require("../api/app");
 const mongoose = require("mongoose");
-const Recetas = require("../api/models/Recetas");
-const recetasSeed = require("../tests/testSeeds/recetasSeed.json");
+const Recetas = require("../api/models/RecetasOld");
+const recetasSeed = require("../tests/testSeeds/recetasOldSeed.json");
 
 const request = supertest(app);
 
 const token = process.env.HRADB_A_MONGODB_SECRET;
 
 beforeEach(async () => {
-  // cerrar la coneccion que se crea en el index.js
-  await mongoose.disconnect();
-  // conectarse a la bd de testing
-  await mongoose.connect(`${process.env.MONGO_URI}/recetas_test`, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  // // cerrar la coneccion que se crea en el index.js
+  // await mongoose.disconnect();
+  // // conectarse a la bd de testing
+  // await mongoose.connect(`${process.env.MONGO_URI}/recetas_test`, {
+  //   useNewUrlParser: true,
+  //   useUnifiedTopology: true,
+  // });
   // cargar los seeds a la bd
   await Recetas.create(recetasSeed);
 });
@@ -23,6 +23,11 @@ beforeEach(async () => {
 afterEach(async () => {
   // borrar el contenido de la colleccion en la bd
   await Recetas.deleteMany().exec();
+  // // desconectar la db mongoDB
+  // await mongoose.disconnect();
+});
+
+afterAll(async () => {
   // desconectar la db mongoDB
   await mongoose.disconnect();
 });

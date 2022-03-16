@@ -1,7 +1,6 @@
 [
   {
-    "_id": "000000000001",
-    "correlativo": 1,
+    "correlativo": 10,
     "numeroReceta": 1,
     "tipoReceta": 5,
     "rutPaciente": "11111111-1",
@@ -52,41 +51,40 @@
     ]
   },
   {
-    "_id": "000000000002",
     "correlativo": 2,
-    "numeroReceta": 2,
+    "numeroReceta": 1,
     "tipoReceta": 5,
     "rutPaciente": "11111111-1",
     "medicoPrescriptor": "Nombre medico",
     "patologia": "Patologia",
     "recetaRetenida": false,
-    "fechaEmision": "2022-02-01",
+    "fechaEmision": "2022-01-01",
     "codigoEstablecimiento": "HRA",
     "nombreEstablecimiento": "Hospital Regional Antofagasta Dr. Leonardo Guzmán",
     "pases": [
       {
-        "numeroReceta": 21,
-        "fechaEmisionFutura": "2022-02-02",
+        "numeroReceta": 11,
+        "fechaEmisionFutura": "2022-01-02",
         "numeroPase": 1
       },
       {
-        "numeroReceta": 22,
-        "fechaEmisionFutura": "2022-02-03",
+        "numeroReceta": 12,
+        "fechaEmisionFutura": "2022-01-03",
         "numeroPase": 2
       },
       {
-        "numeroReceta": 23,
-        "fechaEmisionFutura": "2022-02-04",
+        "numeroReceta": 13,
+        "fechaEmisionFutura": "2022-01-04",
         "numeroPase": 3
       },
       {
-        "numeroReceta": 24,
-        "fechaEmisionFutura": "2022-02-05",
+        "numeroReceta": 14,
+        "fechaEmisionFutura": "2022-01-05",
         "numeroPase": 4
       },
       {
-        "numeroReceta": 25,
-        "fechaEmisionFutura": "2022-02-06",
+        "numeroReceta": 15,
+        "fechaEmisionFutura": "2022-01-06",
         "numeroPase": 5
       }
     ],
@@ -104,41 +102,41 @@
     ]
   },
   {
-    "_id": "000000000003",
+    "_id": "000000000001",
     "correlativo": 3,
-    "numeroReceta": 3,
+    "numeroReceta": 1,
     "tipoReceta": 5,
     "rutPaciente": "11111111-1",
     "medicoPrescriptor": "Nombre medico",
     "patologia": "Patologia",
     "recetaRetenida": false,
-    "fechaEmision": "2022-03-01",
+    "fechaEmision": "2022-01-01",
     "codigoEstablecimiento": "HRA",
     "nombreEstablecimiento": "Hospital Regional Antofagasta Dr. Leonardo Guzmán",
     "pases": [
       {
-        "numeroReceta": 31,
-        "fechaEmisionFutura": "2022-03-02",
+        "numeroReceta": 11,
+        "fechaEmisionFutura": "2022-01-02",
         "numeroPase": 1
       },
       {
-        "numeroReceta": 32,
-        "fechaEmisionFutura": "2022-03-03",
+        "numeroReceta": 12,
+        "fechaEmisionFutura": "2022-01-03",
         "numeroPase": 2
       },
       {
-        "numeroReceta": 33,
-        "fechaEmisionFutura": "2022-03-04",
+        "numeroReceta": 13,
+        "fechaEmisionFutura": "2022-01-04",
         "numeroPase": 3
       },
       {
-        "numeroReceta": 34,
-        "fechaEmisionFutura": "2022-03-05",
+        "numeroReceta": 14,
+        "fechaEmisionFutura": "2022-01-05",
         "numeroPase": 4
       },
       {
-        "numeroReceta": 35,
-        "fechaEmisionFutura": "2022-03-06",
+        "numeroReceta": 15,
+        "fechaEmisionFutura": "2022-01-06",
         "numeroPase": 5
       }
     ],
@@ -156,93 +154,40 @@
     ]
   },
   {
-    "_id": "000000000004",
-    "correlativo": 4,
-    "numeroReceta": 4,
+    "correlativo": 3,
+    "numeroReceta": 1,
     "tipoReceta": 5,
     "rutPaciente": "11111111-1",
     "medicoPrescriptor": "Nombre medico",
     "patologia": "Patologia",
     "recetaRetenida": false,
-    "fechaEmision": "2022-04-01",
+    "fechaEmision": "2022-01-01",
     "codigoEstablecimiento": "HRA",
     "nombreEstablecimiento": "Hospital Regional Antofagasta Dr. Leonardo Guzmán",
     "pases": [
       {
-        "numeroReceta": 41,
-        "fechaEmisionFutura": "2022-04-02",
+        "numeroReceta": 11,
+        "fechaEmisionFutura": "2022-01-02",
         "numeroPase": 1
       },
       {
-        "numeroReceta": 42,
-        "fechaEmisionFutura": "2022-04-03",
+        "numeroReceta": 12,
+        "fechaEmisionFutura": "2022-01-03",
         "numeroPase": 2
       },
       {
-        "numeroReceta": 43,
-        "fechaEmisionFutura": "2022-04-04",
+        "numeroReceta": 13,
+        "fechaEmisionFutura": "2022-01-04",
         "numeroPase": 3
       },
       {
-        "numeroReceta": 44,
-        "fechaEmisionFutura": "2022-04-05",
+        "numeroReceta": 14,
+        "fechaEmisionFutura": "2022-01-05",
         "numeroPase": 4
       },
       {
-        "numeroReceta": 45,
-        "fechaEmisionFutura": "2022-04-06",
-        "numeroPase": 5
-      }
-    ],
-    "medicamentos": [
-      {
-        "nombreMedicamento": "Nombre material",
-        "medicamentoControlado": false,
-        "mensaje": "1 cada 24 HRS. por 30 día(s)"
-      },
-      {
-        "nombreMedicamento": "Nombre material 2",
-        "medicamentoControlado": true,
-        "mensaje": "1 cada 12 HRS. por 30 día(s)"
-      }
-    ]
-  },
-  {
-    "_id": "000000000005",
-    "correlativo": 5,
-    "numeroReceta": 5,
-    "tipoReceta": 5,
-    "rutPaciente": "11111111-1",
-    "medicoPrescriptor": "Nombre medico",
-    "patologia": "Patologia",
-    "recetaRetenida": false,
-    "fechaEmision": "2022-05-01",
-    "codigoEstablecimiento": "HC",
-    "nombreEstablecimiento": "Hospital de Calama",
-    "pases": [
-      {
-        "numeroReceta": 51,
-        "fechaEmisionFutura": "2022-05-02",
-        "numeroPase": 1
-      },
-      {
-        "numeroReceta": 52,
-        "fechaEmisionFutura": "2022-05-03",
-        "numeroPase": 2
-      },
-      {
-        "numeroReceta": 53,
-        "fechaEmisionFutura": "2022-05-04",
-        "numeroPase": 3
-      },
-      {
-        "numeroReceta": 54,
-        "fechaEmisionFutura": "2022-05-05",
-        "numeroPase": 4
-      },
-      {
-        "numeroReceta": 55,
-        "fechaEmisionFutura": "2022-05-06",
+        "numeroReceta": 15,
+        "fechaEmisionFutura": "2022-01-06",
         "numeroPase": 5
       }
     ],
