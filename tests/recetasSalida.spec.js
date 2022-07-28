@@ -116,20 +116,16 @@ const recetaActualizar = {
 };
 
 beforeEach(async () => {
-  // await mongoose.disconnect();
-  // await mongoose.connect(`${process.env.MONGO_URI}/recetas_salida_test`, {
-  //   useNewUrlParser: true,
-  //   useUnifiedTopology: true,
-  // });
+  await mongoose.disconnect();
+  await mongoose.connect(`${process.env.MONGO_URI}/recetas_salida_test`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
   await Recetas.create(recetasSeed);
 });
 
 afterEach(async () => {
   await Recetas.deleteMany();
-  // await mongoose.disconnect();
-});
-
-afterAll(async () => {
   await mongoose.disconnect();
 });
 
@@ -271,7 +267,7 @@ describe("Endpoints recetas salida", () => {
           afectado: 16,
           realizado: false,
           error:
-            "MongoServerError - E11000 duplicate key error collection: hrapp_recetas_test.recetas index: _id_ dup key: { _id: ObjectId('303030303030303030303031') }",
+            "MongoServerError - E11000 duplicate key error collection: recetas_salida_test.recetas index: _id_ dup key: { _id: ObjectId('303030303030303030303031') }",
         },
         {
           afectado: 15,
